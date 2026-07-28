@@ -4,10 +4,10 @@
  */
 
 /* ========== 数据模型常量 ========== */
-const KEY_P='sd_projects', KEY_F='sd_followups', KEY_PB='sd_pricebook',
-      KEY_DV='sd_deliveries', KEY_CT='sd_contracts', KEY_AL='sd_alerts',
-      KEY_SC='sd_scripts', KEY_TPL='sd_templates', KEY_TGT='sd_targets',
-      KEY_CUST='sd_customers';
+const KEY_P='sw_projects', KEY_F='sw_followups', KEY_PB='sw_pricebook',
+      KEY_DV='sw_deliveries', KEY_CT='sw_contracts', KEY_AL='sw_alerts',
+      KEY_SC='sw_scripts', KEY_TPL='sw_templates', KEY_TGT='sw_targets',
+      KEY_CUST='sw_customers';
 
 const STAGES=['初步沟通','现场踏勘','方案报价','商务谈判','已签合同','施工进场','竣工待回款','项目完结','丢失项目'];
 const STAGE_NEG=[0,1,2,3];
