@@ -878,13 +878,7 @@ function importAllData(jsonStr){
 function getSyncStamp(){return localStorage.getItem('sd_sync_stamp')||'';}
 function updateSyncStamp(){localStorage.setItem('sd_sync_stamp',new Date().toISOString());}
 
-/* ========== PWA 安装提示 ========== */
-let deferredPrompt;
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;});
-function installPWA(){
-  if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.then(r=>{if(r.outcome==='accepted')toast('安装成功！');deferredPrompt=null;});}
-  else{toast('请通过浏览器菜单安装','error');}
-}
+/* ========== PWA 安装提示（完整实现在主脚本中） ========== */
 
 // 自动初始化种子数据
 // seedIfEmpty() moved to startup below
