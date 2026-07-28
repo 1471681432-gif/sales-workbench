@@ -504,7 +504,6 @@
   <main class="main">
     <button class="menu-toggle-collapsed" id="deskExpand" title="展开菜单" style="font-size:18px;color:var(--ink)">☰</button>
     <div id="pageContent">
-      <div id="_startupDebug" style="padding:20px;background:#1f2937;color:#e5e7eb;font-family:monospace;font-size:13px;line-height:1.7;border-radius:8px;margin:20px;white-space:pre-wrap;">Waiting for JS...</div>
     </div>
   </main>
 </div>
@@ -560,21 +559,6 @@
   <button class="install-close" id="installDismiss">×</button>
 </div>
 
-<script>
-// 最早执行的测试脚本
-(function(){
-  var el = document.getElementById('_startupDebug');
-  if(el) el.textContent = 'JS ENGINE OK - shared.js loading...';
-  // 1秒后检查主脚本是否执行
-  setTimeout(function(){
-    var el2 = document.getElementById('_startupDebug');
-    if(el2 && el2.textContent.indexOf('INLINE SCRIPT') === -1){
-      el2.textContent = 'MAIN SCRIPT DID NOT EXECUTE\nPossible causes:\n1. shared.js SyntaxError\n2. Script blocked by CSP\n3. Network error loading shared.js\n\nCheck browser console (F12) for errors.';
-    }
-  }, 2000);
-})();
-</script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 <script>
 /**
@@ -903,7 +887,7 @@ function installPWA(){
 }
 
 // 自动初始化种子数据
-seedIfEmpty();
+// seedIfEmpty() moved to startup below
 </script>
 <script>
 /* ============ OCR 识别引擎（Tesseract.js 中英文） ============ */
@@ -3176,29 +3160,6 @@ function refreshFollowupTable(){
   if(desc)desc.textContent=`子表 · 与项目总台账双向联动 · 共 ${loadF().length} 条，已筛选 ${fs.length} 条`;
 }
 
-// 启动（带调试）
-try{
-  const out = [];
-  function dbg(msg){ out.push(msg); }
-  dbg('INLINE SCRIPT START');
-  dbg('KEY_P='+(typeof KEY_P!=='undefined'?KEY_P:'UNDEF'));
-  dbg('loadP='+(typeof loadP));
-  dbg('seedIfEmpty='+(typeof seedIfEmpty));
-  try{ dbg('beforeP='+loadP().length); seedIfEmpty(); dbg('afterP='+loadP().length); }
-  catch(e){ dbg('SEED ERR: '+e.message); }
-  dbg('currentPage='+(typeof currentPage!=='undefined'?currentPage:'UNDEF'));
-  dbg('render='+(typeof render));
-  try{ render(); dbg('RENDER OK'); }
-  catch(e){ dbg('RENDER ERR: '+e.message); }
-  dbg('pageContent='+(document.getElementById('pageContent')?'exists':'missing'));
-  const el=document.getElementById('_startupDebug');
-  if(el) el.textContent=out.join('\n');
-  document.title='['+out.length+'] '+document.title;
-}catch(e){
-  document.title='JS CRASH: '+e.message;
-  const el=document.getElementById('_startupDebug');
-  if(el) el.textContent='JS CRASH\n'+e.message+'\n'+(e.stack||'no stack');
-}
 
 /* ============ PWA 安装逻辑 ============ */
 let deferredPrompt = null;
@@ -3272,6 +3233,38 @@ if('serviceWorker' in navigator){
 if('caches' in window){
   caches.keys().then(keys=>keys.forEach(k=>caches.delete(k)));
 }
+</script>
+
+/* ============ 启动 ============ */
+// 全局错误捕获 - 任何 JS 错误都会显示在页面上
+window.onerror = function(msg, src, lineNo, colNo, err) {
+  var pc = document.getElementById("pageContent");
+  if (pc) {
+    pc.innerHTML = "<div style=\"padding:40px;background:#fee2e2;border-radius:12px;margin:20px\"><h2 style=\"color:#dc2626\">❌ 脚本错误</h2><p><b>错误信息：</b>" + msg + "</p><p><b>位置：</b>行 " + lineNo + "</p><p style=\"margin-top:10px;font-size:12px;color:#666\">请截图此错误信息发给开发者</p></div>";
+  }
+  return true; // 阻止浏览器默认报错
+};
+
+(function() {
+  try {
+    // 1. 初始化种子数据（仅首次）
+    seedIfEmpty();
+    
+    // 2. 渲染页面
+    render();
+    
+    // 3. 如果页面有图表，初始化图表
+    if (typeof initTargetChart === "function" && currentPage === "dashboard") {
+      setTimeout(initTargetChart, 100);
+    }
+  } catch(e) {
+    var pc2 = document.getElementById("pageContent");
+    if (pc2) {
+      pc2.innerHTML = "<div style=\"padding:40px;background:#fee2e2;border-radius:12px;margin:20px\"><h2 style=\"color:#dc2626\">❌ 启动失败</h2><p>" + e.message + "</p><pre style=\"font-size:12px;overflow:auto\">" + (e.stack || "无堆栈") + "</pre></div>";
+    }
+  }
+})();
+
 </script>
 </body>
 </html>
