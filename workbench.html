@@ -560,9 +560,16 @@
   <button class="install-close" id="installDismiss">×</button>
 </div>
 
+<script>
+// 最早执行的测试脚本
+(function(){
+  var el = document.getElementById('_startupDebug');
+  if(el) el.textContent = 'JS ENGINE OK - shared.js loading...';
+})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-<script src="shared.js?v=4"></script>
+<script src="shared.js?v=999"></script>
 <script>
 /* ============ OCR 识别引擎（Tesseract.js 中英文） ============ */
 let _ocrWorker=null;
@@ -2838,7 +2845,7 @@ function refreshFollowupTable(){
 try{
   const out = [];
   function dbg(msg){ out.push(msg); }
-  dbg('SCRIPT START');
+  dbg('INLINE SCRIPT START');
   dbg('KEY_P='+(typeof KEY_P!=='undefined'?KEY_P:'UNDEF'));
   dbg('loadP='+(typeof loadP));
   dbg('seedIfEmpty='+(typeof seedIfEmpty));
@@ -2855,7 +2862,7 @@ try{
 }catch(e){
   document.title='JS CRASH: '+e.message;
   const el=document.getElementById('_startupDebug');
-  if(el) el.textContent='JS CRASH\n'+e.message+'\n'+e.stack;
+  if(el) el.textContent='JS CRASH\n'+e.message+'\n'+(e.stack||'no stack');
 }
 
 /* ============ PWA 安装逻辑 ============ */
