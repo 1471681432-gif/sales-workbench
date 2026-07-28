@@ -2832,9 +2832,72 @@ function refreshFollowupTable(){
   if(desc)desc.textContent=`子表 · 与项目总台账双向联动 · 共 ${loadF().length} 条，已筛选 ${fs.length} 条`;
 }
 
-// 启动
-try{seedIfEmpty();}catch(e){document.getElementById('pageContent').innerHTML='<div style="padding:40px;background:#fee2e2;border-radius:12px;margin:20px"><h2 style="color:#dc2626">数据初始化出错</h2><p>'+e.message+'</p><pre style="font-size:12px">'+e.stack+'</pre></div>';}
-try{render();}catch(e){document.getElementById('pageContent').innerHTML='<div style="padding:40px;background:#fee2e2;border-radius:12px;margin:20px"><h2 style="color:#dc2626">页面渲染出错</h2><p>'+e.message+'</p><pre style="font-size:12px">'+e.stack+'</pre></div>';}
+// 启动（带调试面板）
+(function(){
+  const logs = [];
+  function log(msg){ logs.push(msg); }
+
+  log('=== STARTUP DEBUG ===');
+  log('localStorage available: ' + (typeof localStorage !== 'undefined'));
+  try { log('localStorage test: ' + localStorage.setItem('_t','1') + '|' + localStorage.getItem('_t')); localStorage.removeItem('_t'); } catch(e) { log('localStorage test ERROR: ' + e.message); }
+
+  log('KEY_P = ' + (typeof KEY_P !== 'undefined' ? KEY_P : 'UNDEFINED'));
+  log('loadP type = ' + typeof loadP);
+  log('seedIfEmpty type = ' + typeof seedIfEmpty);
+
+  try {
+    const beforeP = loadP ? loadP().length : 'loadP missing';
+    log('loadP().length BEFORE seedIfEmpty = ' + beforeP);
+    seedIfEmpty();
+    const afterP = loadP().length;
+    log('loadP().length AFTER seedIfEmpty = ' + afterP);
+    log('loadF().length = ' + loadF().length);
+    log('loadDV().length = ' + loadDV().length);
+    log('loadCT().length = ' + loadCT().length);
+    log('loadAL().length = ' + loadAL().length);
+    log('loadSC().length = ' + loadSC().length);
+    log('loadTPL().length = ' + loadTPL().length);
+  } catch(e) {
+    log('seedIfEmpty ERROR: ' + e.message);
+    log('stack: ' + (e.stack || 'no stack'));
+  }
+
+  log('currentPage = ' + (typeof currentPage !== 'undefined' ? currentPage : 'UNDEFINED'));
+  log('render type = ' + typeof render);
+  log('dashboardHtml type = ' + (typeof dashboardHtml !== 'undefined' ? typeof dashboardHtml : 'UNDEFINED'));
+
+  try {
+    const html = dashboardHtml ? dashboardHtml() : 'dashboardHtml missing';
+    log('dashboardHtml output length = ' + (typeof html === 'string' ? html.length : 'not string'));
+    log('dashboardHtml starts with = ' + (typeof html === 'string' ? html.slice(0,80) : 'N/A'));
+  } catch(e) {
+    log('dashboardHtml ERROR: ' + e.message);
+  }
+
+  try {
+    render();
+    log('render() executed OK');
+    const pc = document.getElementById('pageContent');
+    log('pageContent exists = ' + !!pc);
+    if(pc) log('pageContent innerHTML length = ' + pc.innerHTML.length);
+  } catch(e) {
+    log('render ERROR: ' + e.message);
+    log('stack: ' + (e.stack || 'no stack'));
+  }
+
+  // 显示调试面板
+  const panel = document.createElement('div');
+  panel.id = '_debugPanel';
+  panel.style.cssText = 'position:fixed;top:8px;right:8px;width:420px;max-height:70vh;background:#1f2937;color:#e5e7eb;font-family:monospace;font-size:12px;line-height:1.6;padding:12px;border-radius:8px;z-index:99999;overflow:auto;box-shadow:0 10px 30px rgba(0,0,0,.4);';
+  panel.innerHTML = '<div style="font-weight:700;color:#fbbf24;margin-bottom:8px;">DEBUG PANEL</div><pre style="margin:0;white-space:pre-wrap;word-break:break-all;">' + logs.join('\n') + '</pre>';
+  document.addEventListener('DOMContentLoaded', function(){
+    document.body.appendChild(panel);
+  });
+  // 如果 DOM 已经加载完成，直接添加
+  if(document.readyState !== 'loading'){
+    document.body.appendChild(panel);
+  }
+})();
 
 /* ============ PWA 安装逻辑 ============ */
 let deferredPrompt = null;
