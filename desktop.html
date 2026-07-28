@@ -789,13 +789,14 @@ document.addEventListener('click',e=>{
 });
 
 function render(){
-  const c=document.getElementById('pageContent');
-  if(currentPage==='dashboard')c.innerHTML=dashboardHtml();
-  else if(currentPage==='projects')c.innerHTML=projectsHtml();
-  else if(currentPage==='followups')c.innerHTML=followupsHtml();
-  else if(currentPage==='callback')c.innerHTML=callbackHtml();
-  else if(currentPage==='payment')c.innerHTML=paymentHtml();
-  else if(currentPage==='pricebook')c.innerHTML=pricebookHtml();
+  try{
+    const c=document.getElementById('pageContent');
+    if(currentPage==='dashboard')c.innerHTML=dashboardHtml();
+    else if(currentPage==='projects')c.innerHTML=projectsHtml();
+    else if(currentPage==='followups')c.innerHTML=followupsHtml();
+    else if(currentPage==='callback')c.innerHTML=callbackHtml();
+    else if(currentPage==='payment')c.innerHTML=paymentHtml();
+    else if(currentPage==='pricebook')c.innerHTML=pricebookHtml();
   else if(currentPage==='deliveries')c.innerHTML=deliveriesHtml();
   else if(currentPage==='contracts')c.innerHTML=contractsHtml();
   else if(currentPage==='alerts')c.innerHTML=alertsHtml();
@@ -809,6 +810,10 @@ function render(){
   if(currentPage==='funnel')initFunnelChart();
   if(currentPage==='targets')initTargetChart();
   bindRowEvents();
+  }catch(e){
+    const c=document.getElementById('pageContent');
+    c.innerHTML='<div style="padding:40px;background:#fee2e2;border-radius:12px;margin:20px"><h2 style="color:#dc2626">页面加载出错</h2><p style="color:#991b1b">'+e.message+'</p><pre style="background:#fff;padding:12px;border-radius:8px;overflow:auto;font-size:12px">'+e.stack+'</pre></div>';
+  }
 }
 
 function updateBadges(){
