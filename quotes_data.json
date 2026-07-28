@@ -1,0 +1,2552 @@
+{
+  "count": 40,
+  "items": [
+    {
+      "filename": "10MM硅pu材料报价（微发泡）.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 3.4000000000000004
+        },
+        {
+          "name": "TPU主材",
+          "qty": 4.9,
+          "unit": "Kg/㎡",
+          "unit_price": 9.0,
+          "amount": 44.1
+        },
+        {
+          "name": "硅pu主材",
+          "qty": 3.4,
+          "unit": "Kg/㎡",
+          "unit_price": 8.5,
+          "amount": 28.9
+        },
+        {
+          "name": "硅pu面漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 33.0,
+          "amount": 6.6000000000000005
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.3,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 3.5999999999999996
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.1,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.05
+        },
+        {
+          "name": "界线漆",
+          "qty": 0.01,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.45
+        }
+      ],
+      "summary": {
+        "材料造价": 87.1,
+        "施工费": 15.0,
+        "运费": 6.0,
+        "税费": 8.648,
+        "总合计": 116.74799999999999
+      },
+      "title": "硅pu球场（水泥基础）面层材料用量及造价预算方案(10mm)",
+      "type": "硅PU",
+      "thickness": "10mm",
+      "tags": [
+        "发泡",
+        "微发泡"
+      ],
+      "search_keywords": "硅pu 10mm 发泡 微发泡"
+    },
+    {
+      "filename": "10mm全塑型跑道材料报价（发泡自结纹）.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 18.0,
+          "amount": 3.6
+        },
+        {
+          "name": "TPU底胶",
+          "qty": 5.6,
+          "unit": "Kg/㎡",
+          "unit_price": 9.5,
+          "amount": 53.2
+        },
+        {
+          "name": "清浆料",
+          "qty": 1.5,
+          "unit": "Kg/㎡",
+          "unit_price": 8.3,
+          "amount": 12.45
+        },
+        {
+          "name": "自结纹红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.2,
+          "unit": "Kg/㎡",
+          "unit_price": 19.0,
+          "amount": 22.8
+        },
+        {
+          "name": "红胶粉",
+          "qty": 0.06,
+          "unit": "Kg/㎡",
+          "unit_price": 2.0,
+          "amount": 0.12
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.4,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.2
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.02,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.9
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.04,
+          "unit": "Kg/㎡",
+          "unit_price": 40.0,
+          "amount": 1.6
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 2.4
+        }
+      ],
+      "summary": {
+        "材料造价": 97.27,
+        "施工费": 15.0,
+        "运费": 4.0,
+        "税费": 9.3,
+        "总合计": 125.57
+      },
+      "title": "全塑型跑道（水泥/沥青基础）面层材料用量及造价预算方案(10mm)",
+      "type": "全塑型跑道",
+      "thickness": "10mm",
+      "tags": [
+        "发泡",
+        "自结纹"
+      ],
+      "search_keywords": "全塑型跑道 10mm 发泡 自结纹"
+    },
+    {
+      "filename": "10mm硅pu材料报价（微发泡） (2).xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.3,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 5.1
+        },
+        {
+          "name": "TPU主材",
+          "qty": 5.1,
+          "unit": "Kg/㎡",
+          "unit_price": 9.0,
+          "amount": 45.9
+        },
+        {
+          "name": "硅pu主材",
+          "qty": 3.4,
+          "unit": "Kg/㎡",
+          "unit_price": 8.5,
+          "amount": 28.9
+        },
+        {
+          "name": "硅pu面漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 33.0,
+          "amount": 6.6
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.3,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 3.6
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.1,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.05
+        },
+        {
+          "name": "界线漆",
+          "qty": 0.01,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.45
+        }
+      ],
+      "summary": {
+        "材料造价": 90.6,
+        "施工费": 16.0,
+        "运费": 1.6,
+        "税费": 8.655999999999999,
+        "总合计": 116.856
+      },
+      "title": "硅pu球场（水泥基础）面层材料用量及造价预算方案(10mm)",
+      "type": "硅PU",
+      "thickness": "10mm",
+      "tags": [
+        "发泡",
+        "微发泡"
+      ],
+      "search_keywords": "硅pu 10mm 发泡 微发泡"
+    },
+    {
+      "filename": "13mmEPDM材料报价（红、白颗粒打底）.xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 16.0,
+          "amount": 3.2
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.0,
+          "unit": "Kg/㎡",
+          "unit_price": 16.0,
+          "amount": 16.0
+        },
+        {
+          "name": "白颗粒(Ø2-4mm)",
+          "qty": 7.6,
+          "unit": "Kg/㎡",
+          "unit_price": 4.0,
+          "amount": 30.4
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 16.0,
+          "amount": 17.6
+        },
+        {
+          "name": "EPDM彩色颗粒(Ø1-3mm)",
+          "qty": 5.5,
+          "unit": "Kg/㎡",
+          "unit_price": 5.0,
+          "amount": 27.5
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 2.4
+        }
+      ],
+      "summary": {
+        "材料造价": 97.1,
+        "施工费": 25.0,
+        "运费": 3.0,
+        "税费": 10.008,
+        "总合计": 135.108
+      },
+      "title": "EPDM颗粒（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "EPDM",
+      "thickness": "13mm",
+      "tags": [
+        "白颗粒"
+      ],
+      "search_keywords": "epdm 13mm 白颗粒"
+    },
+    {
+      "filename": "13mmEPDM材料报价（老国标）.xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 2.8
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.8,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 25.2
+        },
+        {
+          "name": "EPDM彩色颗粒(Ø1-3mm)",
+          "qty": 8.8,
+          "unit": "Kg/㎡",
+          "unit_price": 6.0,
+          "amount": 52.8
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.15,
+          "unit": "Kg/㎡",
+          "unit_price": 10.0,
+          "amount": 1.5
+        }
+      ],
+      "summary": {
+        "材料造价": 82.3,
+        "施工费": 18.0,
+        "运费": 2.0,
+        "总合计": 110.484
+      },
+      "title": "EPDM颗粒（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "EPDM",
+      "thickness": "13mm",
+      "tags": [
+        "老国标"
+      ],
+      "search_keywords": "epdm 13mm 老国标"
+    },
+    {
+      "filename": "13mmEPDM材料报价（花颗粒）.xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 12.5,
+          "amount": 2.5
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 0.8,
+          "unit": "Kg/㎡",
+          "unit_price": 12.5,
+          "amount": 10.0
+        },
+        {
+          "name": "花颗粒(Ø2-4mm)",
+          "qty": 5.3,
+          "unit": "Kg/㎡",
+          "unit_price": 3.0,
+          "amount": 15.899999999999999
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.0,
+          "unit": "Kg/㎡",
+          "unit_price": 13.0,
+          "amount": 13.0
+        },
+        {
+          "name": "EPDM彩色颗粒(Ø1-3mm)",
+          "qty": 5.5,
+          "unit": "Kg/㎡",
+          "unit_price": 4.5,
+          "amount": 24.75
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.1,
+          "unit": "Kg/㎡",
+          "unit_price": 10.0,
+          "amount": 1.0
+        }
+      ],
+      "summary": {
+        "材料造价": 67.15,
+        "施工费": 15.0,
+        "运费": 4.0,
+        "税费": 6.572000000000001,
+        "总合计": 92.72200000000001
+      },
+      "title": "EPDM颗粒（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "EPDM",
+      "thickness": "13mm",
+      "tags": [
+        "花颗粒"
+      ],
+      "search_keywords": "epdm 13mm 花颗粒"
+    },
+    {
+      "filename": "13mmEPDM材料报价（黑颗粒）.xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 15.0,
+          "amount": 3.0
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 0.8,
+          "unit": "Kg/㎡",
+          "unit_price": 15.0,
+          "amount": 12.0
+        },
+        {
+          "name": "黑颗粒(Ø2-4mm)",
+          "qty": 6.0,
+          "unit": "Kg/㎡",
+          "unit_price": 2.0,
+          "amount": 12.0
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 15.0,
+          "amount": 16.5
+        },
+        {
+          "name": "EPDM彩色颗粒(Ø1-3mm)",
+          "qty": 5.5,
+          "unit": "Kg/㎡",
+          "unit_price": 5.0,
+          "amount": 27.5
+        }
+      ],
+      "summary": {
+        "材料造价": 71.0,
+        "施工费": 18.0,
+        "税费": 7.12,
+        "总合计": 96.12
+      },
+      "title": "EPDM颗粒（水泥/沥青基础）面层材料用量及造价预算方案(15mm)",
+      "type": "EPDM",
+      "thickness": "15mm",
+      "tags": [
+        "黑颗粒"
+      ],
+      "search_keywords": "epdm 15mm 黑颗粒"
+    },
+    {
+      "filename": "13mm全塑型SPU跑道材料报价.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 3.4000000000000004
+        },
+        {
+          "name": "TPU底胶 (A组:B组=1:4)",
+          "qty": 7.0,
+          "unit": "Kg/㎡",
+          "unit_price": 8.8,
+          "amount": 61.60000000000001
+        },
+        {
+          "name": "清浆料",
+          "qty": 1.5,
+          "unit": "Kg/㎡",
+          "unit_price": 8.3,
+          "amount": 12.450000000000001
+        },
+        {
+          "name": "红色EPDM颗粒",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 5.0,
+          "amount": 5.5
+        },
+        {
+          "name": "红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 13.0,
+          "amount": 14.3
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.015,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.6749999999999999
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.06,
+          "unit": "Kg/㎡",
+          "unit_price": 35.0,
+          "amount": 2.1
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 11.0,
+          "amount": 2.2
+        }
+      ],
+      "summary": {
+        "材料造价": 102.22500000000001,
+        "施工费": 15.0,
+        "税费": 9.378,
+        "总合计": 126.60300000000001
+      },
+      "title": "TPU全塑型跑道（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "全塑型跑道",
+      "thickness": "13mm",
+      "tags": [],
+      "search_keywords": "全塑型跑道 13mm"
+    },
+    {
+      "filename": "13mm全塑型pu跑道材料报价.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 21.0,
+          "amount": 4.2
+        },
+        {
+          "name": "PU红底胶 (A组:B组=1:4)",
+          "qty": 11.0,
+          "unit": "Kg/㎡",
+          "unit_price": 10.0,
+          "amount": 110.0
+        },
+        {
+          "name": "跑道红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 15.4
+        },
+        {
+          "name": "红色EPDM颗粒           （Ø1-3mm）",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 5.5,
+          "amount": 6.05
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.02,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.9
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.06,
+          "unit": "Kg/㎡",
+          "unit_price": 35.0,
+          "amount": 2.1
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.3,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 3.6
+        }
+      ],
+      "summary": {
+        "材料造价": 142.25,
+        "总合计": 142.25
+      },
+      "title": "全塑型跑道（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "全塑型跑道",
+      "thickness": "13mm",
+      "tags": [],
+      "search_keywords": "全塑型跑道 13mm"
+    },
+    {
+      "filename": "13mm全塑型自结纹TPU跑道材料报价.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 3.4
+        },
+        {
+          "name": "TPU底胶",
+          "qty": 8.0,
+          "unit": "Kg/㎡",
+          "unit_price": 8.0,
+          "amount": 64.0
+        },
+        {
+          "name": "清浆料",
+          "qty": 1.5,
+          "unit": "Kg/㎡",
+          "unit_price": 7.5,
+          "amount": 11.25
+        },
+        {
+          "name": "自结纹红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.2,
+          "unit": "Kg/㎡",
+          "unit_price": 16.0,
+          "amount": 19.2
+        },
+        {
+          "name": "红胶粉",
+          "qty": 0.06,
+          "unit": "Kg/㎡",
+          "unit_price": 4.0,
+          "amount": 0.24
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.4,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.2
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.02,
+          "unit": "Kg/㎡",
+          "unit_price": 40.0,
+          "amount": 0.8
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.04,
+          "unit": "Kg/㎡",
+          "unit_price": 30.0,
+          "amount": 1.2
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 10.0,
+          "amount": 2.0
+        }
+      ],
+      "summary": {
+        "材料造价": 102.29,
+        "施工费": 18.0,
+        "运费": 3.0,
+        "税费": 9.8632,
+        "总合计": 133.1532
+      },
+      "title": "全塑型跑道（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "全塑型跑道",
+      "thickness": "13mm",
+      "tags": [
+        "自结纹"
+      ],
+      "search_keywords": "全塑型跑道 13mm 自结纹"
+    },
+    {
+      "filename": "13mm全塑型自结纹跑道材料报价.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 18.0,
+          "amount": 3.6
+        },
+        {
+          "name": "PU红底胶 (A组:B组=1:4)",
+          "qty": 11.0,
+          "unit": "Kg/㎡",
+          "unit_price": 9.5,
+          "amount": 104.5
+        },
+        {
+          "name": "自结纹红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.2,
+          "unit": "Kg/㎡",
+          "unit_price": 19.0,
+          "amount": 22.8
+        },
+        {
+          "name": "红胶粉",
+          "qty": 0.06,
+          "unit": "Kg/㎡",
+          "unit_price": 3.5,
+          "amount": 0.21
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.02,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.9
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.06,
+          "unit": "Kg/㎡",
+          "unit_price": 30.0,
+          "amount": 1.8
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 2.4
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.5,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.25
+        }
+      ],
+      "summary": {
+        "材料造价": 136.46,
+        "总合计": 136.46
+      },
+      "title": "全塑型跑道（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "全塑型跑道",
+      "thickness": "13mm",
+      "tags": [
+        "自结纹"
+      ],
+      "search_keywords": "全塑型跑道 13mm 自结纹"
+    },
+    {
+      "filename": "13mm复合型跑道报价（新国标）.xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 16.0,
+          "amount": 3.2
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.2,
+          "unit": "Kg/㎡",
+          "unit_price": 16.0,
+          "amount": 19.2
+        },
+        {
+          "name": "花颗粒（Ø2~4mm）",
+          "qty": 7.0,
+          "unit": "Kg/㎡",
+          "unit_price": 4.0,
+          "amount": 28.0
+        },
+        {
+          "name": "PU红色底胶 (A组:B组=1:4)",
+          "qty": 3.0,
+          "unit": "Kg/㎡",
+          "unit_price": 8.0,
+          "amount": 24.0
+        },
+        {
+          "name": "红胶粉",
+          "qty": 0.6,
+          "unit": "Kg/㎡",
+          "unit_price": 2.0,
+          "amount": 1.2
+        },
+        {
+          "name": "跑道红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 15.400000000000002
+        },
+        {
+          "name": "红色EPDM颗粒           （Ø1-3mm）",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 4.5,
+          "amount": 4.95
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.015,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.6749999999999999
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.03,
+          "unit": "Kg/㎡",
+          "unit_price": 30.0,
+          "amount": 0.8999999999999999
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 11.0,
+          "amount": 2.2
+        }
+      ],
+      "summary": {
+        "材料造价": 99.72500000000002,
+        "施工费": 15.0,
+        "总合计": 114.72500000000002
+      },
+      "title": "复合型跑道（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "复合型跑道",
+      "thickness": "13mm",
+      "tags": [
+        "新国标"
+      ],
+      "search_keywords": "复合型跑道 13mm 新国标"
+    },
+    {
+      "filename": "13mm混合型跑道材料报价（发泡新国标）.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 16.0,
+          "amount": 3.2
+        },
+        {
+          "name": "发泡PU红底胶 (A组:B组=1:4)",
+          "qty": 7.5,
+          "unit": "Kg/㎡",
+          "unit_price": 8.2,
+          "amount": 61.49999999999999
+        },
+        {
+          "name": "底层橡胶红颗粒（Ø2~4mm）",
+          "qty": 2.0,
+          "unit": "Kg/㎡",
+          "unit_price": 4.0,
+          "amount": 8.0
+        },
+        {
+          "name": "跑道红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 15.400000000000002
+        },
+        {
+          "name": "红色EPDM颗粒           （Ø1-3mm）",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 5.0,
+          "amount": 5.5
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.015,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.6749999999999999
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.06,
+          "unit": "Kg/㎡",
+          "unit_price": 35.0,
+          "amount": 2.1
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.25,
+          "unit": "Kg/㎡",
+          "unit_price": 11.0,
+          "amount": 2.75
+        }
+      ],
+      "summary": {
+        "材料造价": 99.12499999999999,
+        "施工费": 13.0,
+        "税费": 8.969999999999999,
+        "总合计": 121.09499999999998
+      },
+      "title": "混合型跑道（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "混合型跑道",
+      "thickness": "13mm",
+      "tags": [
+        "新国标",
+        "发泡"
+      ],
+      "search_keywords": "混合型跑道 13mm 新国标 发泡"
+    },
+    {
+      "filename": "13mm混合型跑道材料报价（新国标）.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 3.4000000000000004
+        },
+        {
+          "name": "PU红底胶 (A组:B组=1:4)",
+          "qty": 8.0,
+          "unit": "Kg/㎡",
+          "unit_price": 9.0,
+          "amount": 72.0
+        },
+        {
+          "name": "橡胶红颗粒（Ø2~4mm）",
+          "qty": 1.5,
+          "unit": "Kg/㎡",
+          "unit_price": 4.0,
+          "amount": 6.0
+        },
+        {
+          "name": "跑道红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 15.400000000000002
+        },
+        {
+          "name": "红色EPDM颗粒           （Ø1-3mm）",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 5.0,
+          "amount": 5.5
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.015,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.6749999999999999
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.06,
+          "unit": "Kg/㎡",
+          "unit_price": 35.0,
+          "amount": 2.1
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.25,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 3.0
+        }
+      ],
+      "summary": {
+        "材料造价": 108.075,
+        "施工费": 15.0,
+        "运费": 5.0,
+        "税费": 10.245999999999999,
+        "总合计": 138.321
+      },
+      "title": "混合型跑道（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "混合型跑道",
+      "thickness": "13mm",
+      "tags": [
+        "新国标"
+      ],
+      "search_keywords": "混合型跑道 13mm 新国标"
+    },
+    {
+      "filename": "13mm混合型跑道材料报价（老国标）.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 18.0,
+          "amount": 3.6
+        },
+        {
+          "name": "PU红底胶 (A组:B组=1:4)",
+          "qty": 7.5,
+          "unit": "Kg/㎡",
+          "unit_price": 8.0,
+          "amount": 60.0
+        },
+        {
+          "name": "黑颗粒",
+          "qty": 2.5,
+          "unit": "Kg/㎡",
+          "unit_price": 2.0,
+          "amount": 5.0
+        },
+        {
+          "name": "跑道红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 15.4
+        },
+        {
+          "name": "红色EPDM颗粒           （Ø1-3mm）",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 5.5,
+          "amount": 6.05
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.015,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.675
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.06,
+          "unit": "Kg/㎡",
+          "unit_price": 40.0,
+          "amount": 2.4
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.25,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 3.0
+        }
+      ],
+      "summary": {
+        "材料造价": 96.125,
+        "施工费": 20.0,
+        "运费": 5.0,
+        "总合计": 121.125
+      },
+      "title": "混合型跑道（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "混合型跑道",
+      "thickness": "13mm",
+      "tags": [
+        "老国标"
+      ],
+      "search_keywords": "混合型跑道 13mm 老国标"
+    },
+    {
+      "filename": "13mm透气型跑道报价（白颗粒打底）.xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 12.5,
+          "amount": 2.5
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 0.75,
+          "unit": "Kg/㎡",
+          "unit_price": 12.5,
+          "amount": 9.375
+        },
+        {
+          "name": "白颗粒",
+          "qty": 5.6,
+          "unit": "Kg/㎡",
+          "unit_price": 3.9,
+          "amount": 21.84
+        },
+        {
+          "name": "跑道红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 13.0,
+          "amount": 14.3
+        },
+        {
+          "name": "红色EPDM颗粒",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 5.0,
+          "amount": 5.5
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.015,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.675
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.02,
+          "unit": "Kg/㎡",
+          "unit_price": 40.0,
+          "amount": 0.8
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.15,
+          "unit": "Kg/㎡",
+          "unit_price": 10.0,
+          "amount": 1.5
+        }
+      ],
+      "summary": {
+        "材料造价": 56.49,
+        "施工费": 18.0,
+        "运费": 10.0,
+        "税费": 6.7592,
+        "总合计": 91.2492
+      },
+      "title": "透气型跑道（水泥/沥青基础）面层材料用量及造价预算方案(10mm)",
+      "type": "透气型跑道",
+      "thickness": "10mm",
+      "tags": [
+        "白颗粒"
+      ],
+      "search_keywords": "透气型跑道 10mm 白颗粒"
+    },
+    {
+      "filename": "13mm透气型跑道材料报价（红颗粒）.xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 3.4
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.2,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 20.4
+        },
+        {
+          "name": "红颗粒",
+          "qty": 9.5,
+          "unit": "Kg/㎡",
+          "unit_price": 4.0,
+          "amount": 38.0
+        },
+        {
+          "name": "跑道红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 15.4
+        },
+        {
+          "name": "红色EPDM颗粒",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 5.0,
+          "amount": 5.5
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.015,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.675
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.02,
+          "unit": "Kg/㎡",
+          "unit_price": 40.0,
+          "amount": 0.8
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.15,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 1.8
+        }
+      ],
+      "summary": {
+        "材料造价": 85.975,
+        "施工费": 14.0,
+        "运费": 2.0,
+        "总合计": 101.975
+      },
+      "title": "透气型跑道（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "透气型跑道",
+      "thickness": "13mm",
+      "tags": [
+        "红颗粒"
+      ],
+      "search_keywords": "透气型跑道 13mm 红颗粒"
+    },
+    {
+      "filename": "13mm透气型跑道材料报价（老国标）.xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 15.0,
+          "amount": 3.0
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 15.0,
+          "amount": 16.5
+        },
+        {
+          "name": "黑颗粒（Ø2~4mm）",
+          "qty": 7.5,
+          "unit": "Kg/㎡",
+          "unit_price": 2.5,
+          "amount": 18.75
+        },
+        {
+          "name": "跑道红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 15.0,
+          "amount": 16.5
+        },
+        {
+          "name": "红色EPDM颗粒           （Ø0.5-2mm）",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 5.0,
+          "amount": 5.5
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.015,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.675
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.02,
+          "unit": "Kg/㎡",
+          "unit_price": 40.0,
+          "amount": 0.8
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.15,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 1.8
+        }
+      ],
+      "summary": {
+        "材料造价": 63.525,
+        "施工费": 18.0,
+        "运费": 2.0,
+        "税费": 6.682,
+        "总合计": 90.207
+      },
+      "title": "透气型跑道（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "透气型跑道",
+      "thickness": "13mm",
+      "tags": [
+        "老国标"
+      ],
+      "search_keywords": "透气型跑道 13mm 老国标"
+    },
+    {
+      "filename": "13mm透气型跑道材料报价（花颗粒）.xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 13.0,
+          "amount": 2.6
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 0.7,
+          "unit": "Kg/㎡",
+          "unit_price": 13.0,
+          "amount": 9.1
+        },
+        {
+          "name": "花颗粒（Ø2~4mm）",
+          "qty": 4.0,
+          "unit": "Kg/㎡",
+          "unit_price": 3.3,
+          "amount": 13.2
+        },
+        {
+          "name": "跑道红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 13.0,
+          "amount": 14.3
+        },
+        {
+          "name": "红色EPDM颗粒           （Ø0.5-2mm）",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 5.5,
+          "amount": 6.050000000000001
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.015,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.6749999999999999
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.02,
+          "unit": "Kg/㎡",
+          "unit_price": 35.0,
+          "amount": 0.7000000000000001
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.15,
+          "unit": "Kg/㎡",
+          "unit_price": 9.5,
+          "amount": 1.425
+        }
+      ],
+      "summary": {
+        "材料造价": 48.05,
+        "施工费": 18.0,
+        "运费": 5.0,
+        "税费": 5.684,
+        "总合计": 76.734
+      },
+      "title": "透气型跑道（水泥/沥青基础）面层材料用量及造价预算方案(8mm)",
+      "type": "透气型跑道",
+      "thickness": "8mm",
+      "tags": [
+        "花颗粒"
+      ],
+      "search_keywords": "透气型跑道 8mm 花颗粒"
+    },
+    {
+      "filename": "20mmEPDM材料报价（花颗粒）.xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 15.0,
+          "amount": 3.0
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.8,
+          "unit": "Kg/㎡",
+          "unit_price": 15.0,
+          "amount": 27.0
+        },
+        {
+          "name": "花颗粒(Ø2-4mm)",
+          "qty": 9.8,
+          "unit": "Kg/㎡",
+          "unit_price": 3.8,
+          "amount": 37.24
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.0,
+          "unit": "Kg/㎡",
+          "unit_price": 15.0,
+          "amount": 15.0
+        },
+        {
+          "name": "EPDM彩色颗粒(Ø1-3mm)",
+          "qty": 5.5,
+          "unit": "Kg/㎡",
+          "unit_price": 5.0,
+          "amount": 27.5
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.15,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 1.7999999999999998
+        }
+      ],
+      "summary": {
+        "材料造价": 111.54,
+        "施工费": 14.0,
+        "运费": 3.0,
+        "税费": 10.283200000000003,
+        "总合计": 138.8232
+      },
+      "title": "EPDM颗粒（水泥/沥青基础）面层材料用量及造价预算方案(20mm)",
+      "type": "EPDM",
+      "thickness": "20mm",
+      "tags": [
+        "花颗粒"
+      ],
+      "search_keywords": "epdm 20mm 花颗粒"
+    },
+    {
+      "filename": "2mm丙烯酸材料报价.xlsx",
+      "materials": [
+        {
+          "name": "D68乳液",
+          "qty": 0.4,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 5.6000000000000005
+        },
+        {
+          "name": "108胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 4.0,
+          "amount": 0.8
+        },
+        {
+          "name": "石英砂60~80",
+          "qty": 1.2,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.6
+        },
+        {
+          "name": "面漆",
+          "qty": 0.5,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 7.0
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.1
+        },
+        {
+          "name": "界线漆",
+          "qty": 0.01,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.45
+        },
+        {
+          "name": "水泥",
+          "qty": 0.8,
+          "unit": "Kg/㎡",
+          "unit_price": null,
+          "amount": null
+        }
+      ],
+      "summary": {
+        "材料造价": 14.549999999999999,
+        "施工费": 15.0,
+        "运费": 4.0,
+        "税费": 2.6839999999999997,
+        "总合计": 36.233999999999995
+      },
+      "title": "丙烯酸球场（水泥基础）面层材料用量及造价预算方案(2mm)",
+      "type": "丙烯酸",
+      "thickness": "2mm",
+      "tags": [],
+      "search_keywords": "丙烯酸 2mm"
+    },
+    {
+      "filename": "2mm丙烯酸看台材料报价.xlsx",
+      "materials": [
+        {
+          "name": "D68乳液",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 2.8
+        },
+        {
+          "name": "108胶水",
+          "qty": 0.1,
+          "unit": "Kg/㎡",
+          "unit_price": 5.0,
+          "amount": 0.5
+        },
+        {
+          "name": "面漆",
+          "qty": 0.5,
+          "unit": "Kg/㎡",
+          "unit_price": 13.0,
+          "amount": 6.5
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.1
+        },
+        {
+          "name": "界线漆",
+          "qty": 0.01,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.45
+        },
+        {
+          "name": "水泥",
+          "qty": 0.8,
+          "unit": "Kg/㎡",
+          "unit_price": null,
+          "amount": null
+        }
+      ],
+      "summary": {
+        "材料造价": 10.35,
+        "施工费": 13.0,
+        "运费": 2.0,
+        "总合计": 25.35
+      },
+      "title": "丙烯酸看台（水泥基础）面层材料用量及造价预算方案(2mm)",
+      "type": "丙烯酸（看台）",
+      "thickness": "2mm",
+      "tags": [
+        "看台"
+      ],
+      "search_keywords": "丙烯酸（看台） 2mm 看台"
+    },
+    {
+      "filename": "4MM硅pu材料报价 。.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 3.4000000000000004
+        },
+        {
+          "name": "硅pu主材",
+          "qty": 4.8,
+          "unit": "Kg/㎡",
+          "unit_price": 8.0,
+          "amount": 38.4
+        },
+        {
+          "name": "硅pu面漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 32.0,
+          "amount": 6.4
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 11.0,
+          "amount": 2.2
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.1,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.05
+        },
+        {
+          "name": "界线漆",
+          "qty": 0.01,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.45
+        }
+      ],
+      "summary": {
+        "材料造价": 50.9,
+        "施工费": 13.0,
+        "总合计": 63.9
+      },
+      "title": "硅pu球场（水泥基础）面层材料用量及造价预算方案(4mm)",
+      "type": "硅PU",
+      "thickness": "4mm",
+      "tags": [],
+      "search_keywords": "硅pu 4mm"
+    },
+    {
+      "filename": "4MM硅pu材料报价.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 18.0,
+          "amount": 3.6
+        },
+        {
+          "name": "硅pu主材",
+          "qty": 4.6,
+          "unit": "Kg/㎡",
+          "unit_price": 8.8,
+          "amount": 40.48
+        },
+        {
+          "name": "硅pu面漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 33.0,
+          "amount": 6.6
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 2.4
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.1,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.05
+        },
+        {
+          "name": "界线漆",
+          "qty": 0.01,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.45
+        }
+      ],
+      "summary": {
+        "材料造价": 53.58,
+        "施工费": 14.0,
+        "运费": 3.0,
+        "税费": 6.0,
+        "总合计": 76.58
+      },
+      "title": "硅pu球场（水泥基础）面层材料用量及造价预算方案(4mm)",
+      "type": "硅PU",
+      "thickness": "4mm",
+      "tags": [],
+      "search_keywords": "硅pu 4mm"
+    },
+    {
+      "filename": "50mmEPDM材料报价.xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 2.8
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 2.5,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 35.0
+        },
+        {
+          "name": "黑花颗粒(Ø2-4mm)",
+          "qty": 20.0,
+          "unit": "Kg/㎡",
+          "unit_price": 2.0,
+          "amount": 40.0
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 18.7
+        },
+        {
+          "name": "EPDM彩色颗粒(Ø1-3mm)",
+          "qty": 5.5,
+          "unit": "Kg/㎡",
+          "unit_price": 5.0,
+          "amount": 27.5
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.15,
+          "unit": "Kg/㎡",
+          "unit_price": 13.0,
+          "amount": 1.95
+        }
+      ],
+      "summary": {
+        "材料造价": 125.95,
+        "施工费": 30.0,
+        "运费": 3.0,
+        "总合计": 158.95
+      },
+      "title": "EPDM颗粒（水泥/沥青基础）面层材料用量及造价预算方案(15mm)",
+      "type": "EPDM",
+      "thickness": "15mm",
+      "tags": [],
+      "search_keywords": "epdm 15mm"
+    },
+    {
+      "filename": "5MM硅pu材料报价.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 18.0,
+          "amount": 3.6
+        },
+        {
+          "name": "硅pu主材",
+          "qty": 5.7,
+          "unit": "Kg/㎡",
+          "unit_price": 7.2,
+          "amount": 41.04
+        },
+        {
+          "name": "硅pu面漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 31.0,
+          "amount": 6.2
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.3,
+          "unit": "Kg/㎡",
+          "unit_price": 11.0,
+          "amount": 3.3
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.4,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.2
+        },
+        {
+          "name": "界线漆",
+          "qty": 0.01,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.45
+        }
+      ],
+      "summary": {
+        "材料造价": 54.790000000000006,
+        "施工费": 14.0,
+        "税费": 5.5032000000000005,
+        "总合计": 74.29320000000001
+      },
+      "title": "硅pu球场（水泥基础）面层材料用量及造价预算方案(5mm)",
+      "type": "硅PU",
+      "thickness": "5mm",
+      "tags": [],
+      "search_keywords": "硅pu 5mm"
+    },
+    {
+      "filename": "5mmEPDM材料报(英文版)价.xlsx",
+      "materials": [],
+      "summary": {}
+    },
+    {
+      "filename": "5mmEPDM材料报价..xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 3.4000000000000004
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.28,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 21.76
+        },
+        {
+          "name": "epdm颗粒",
+          "qty": 7.7,
+          "unit": "Kg/㎡",
+          "unit_price": 5.0,
+          "amount": 38.5
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 2.4000000000000004
+        }
+      ],
+      "summary": {
+        "材料造价": 66.06,
+        "施工费": 15.0,
+        "税费": 6.4848,
+        "总合计": 87.54480000000001
+      },
+      "title": "EPDM颗粒（水泥/沥青基础）面层材料用量及造价预算方案(5mm)",
+      "type": "EPDM",
+      "thickness": "5mm",
+      "tags": [],
+      "search_keywords": "epdm 5mm"
+    },
+    {
+      "filename": "5mmEPDM材料报价.xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 3.4000000000000004
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.2,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 20.4
+        },
+        {
+          "name": "epdm颗粒",
+          "qty": 6.0,
+          "unit": "Kg/㎡",
+          "unit_price": 6.0,
+          "amount": 36.0
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.1,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 1.2000000000000002
+        }
+      ],
+      "summary": {
+        "材料造价": 61.0,
+        "施工费": 30.0,
+        "税费": 7.28,
+        "总合计": 98.28
+      },
+      "title": "EPDM颗粒（水泥/沥青基础）面层材料用量及造价预算方案(5mm)",
+      "type": "EPDM",
+      "thickness": "5mm",
+      "tags": [],
+      "search_keywords": "epdm 5mm"
+    },
+    {
+      "filename": "5mm弹性丙烯酸报价.xlsx",
+      "materials": [
+        {
+          "name": "弹性1号",
+          "qty": 6.0,
+          "unit": "Kg/㎡",
+          "unit_price": 10.0,
+          "amount": 60.0
+        },
+        {
+          "name": "弹性2号",
+          "qty": 1.0,
+          "unit": "Kg/㎡",
+          "unit_price": 10.0,
+          "amount": 10.0
+        },
+        {
+          "name": "封闭乳液",
+          "qty": 0.4,
+          "unit": "Kg/㎡",
+          "unit_price": 14.0,
+          "amount": 5.6
+        },
+        {
+          "name": "石英沙(80-100目)",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.1
+        },
+        {
+          "name": "划线漆",
+          "qty": 0.01,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.45
+        }
+      ],
+      "summary": {
+        "材料造价": 83.95,
+        "施工费": 15.0,
+        "税费": 2.9685,
+        "总合计": 101.9185
+      },
+      "title": "弹性丙烯酸球场（水泥基础）面层材料用量及造价预算方案(4mm)",
+      "type": "弹性丙烯酸",
+      "thickness": "4mm",
+      "tags": [],
+      "search_keywords": "弹性丙烯酸 4mm"
+    },
+    {
+      "filename": "5公分人造草专业报价.xlsx",
+      "materials": [
+        {
+          "name": "三筋W型",
+          "qty": null,
+          "unit": "Kg/㎡",
+          "unit_price": null,
+          "amount": 23.5
+        },
+        {
+          "name": "环保颗粒",
+          "qty": null,
+          "unit": "Kg/㎡",
+          "unit_price": null,
+          "amount": 8.0
+        },
+        {
+          "name": "胶水",
+          "qty": null,
+          "unit": "Kg/㎡",
+          "unit_price": null,
+          "amount": 1.6
+        },
+        {
+          "name": "黑色连接带",
+          "qty": null,
+          "unit": "Kg/㎡",
+          "unit_price": null,
+          "amount": null
+        },
+        {
+          "name": "减震垫",
+          "qty": null,
+          "unit": "Kg/㎡",
+          "unit_price": null,
+          "amount": 8.0
+        },
+        {
+          "name": "施工",
+          "qty": null,
+          "unit": "Kg/㎡",
+          "unit_price": null,
+          "amount": 6.0
+        },
+        {
+          "name": "运费",
+          "qty": null,
+          "unit": "Kg/㎡",
+          "unit_price": null,
+          "amount": 6.0
+        },
+        {
+          "name": "成本合计",
+          "qty": null,
+          "unit": "Kg/㎡",
+          "unit_price": null,
+          "amount": 53.1
+        }
+      ],
+      "summary": {},
+      "title": "三筋直立型单丝W型系列足球场面层预算表（专业型)",
+      "type": "其他",
+      "thickness": "5cm",
+      "tags": [],
+      "search_keywords": "其他 5cm"
+    },
+    {
+      "filename": "6MM硅pu材料报价.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 3.4
+        },
+        {
+          "name": "硅pu主材",
+          "qty": 6.6,
+          "unit": "Kg/㎡",
+          "unit_price": 8.8,
+          "amount": 58.08
+        },
+        {
+          "name": "硅pu面漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 33.0,
+          "amount": 6.6
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 2.4
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.3,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.15
+        },
+        {
+          "name": "界线漆",
+          "qty": 0.01,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.45
+        }
+      ],
+      "summary": {
+        "材料造价": 71.08,
+        "施工费": 14.0,
+        "运费": 3.0,
+        "税费": 7.0,
+        "总合计": 95.08
+      },
+      "title": "硅pu球场（水泥基础）面层材料用量及造价预算方案(6mm)",
+      "type": "硅PU",
+      "thickness": "6mm",
+      "tags": [],
+      "search_keywords": "硅pu 6mm"
+    },
+    {
+      "filename": "8MM硅pu材料报价.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.3,
+          "unit": "Kg/㎡",
+          "unit_price": 15.2,
+          "amount": 4.56
+        },
+        {
+          "name": "硅pu主材",
+          "qty": 11.2,
+          "unit": "Kg/㎡",
+          "unit_price": 8.0,
+          "amount": 89.6
+        },
+        {
+          "name": "硅pu面漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 28.0,
+          "amount": 5.6
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.3,
+          "unit": "Kg/㎡",
+          "unit_price": 9.0,
+          "amount": 2.7
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.1,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.05
+        },
+        {
+          "name": "界线漆",
+          "qty": 0.01,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.45
+        }
+      ],
+      "summary": {
+        "材料造价": 102.96,
+        "施工费": 25.0,
+        "总合计": 127.96
+      },
+      "title": "硅pu球场（水泥基础）面层材料用量及造价预算方案(8mm)",
+      "type": "硅PU",
+      "thickness": "8mm",
+      "tags": [],
+      "search_keywords": "硅pu 8mm"
+    },
+    {
+      "filename": "8mmEPDM材料报价..xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 15.0,
+          "amount": 3.0
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 2.0,
+          "unit": "Kg/㎡",
+          "unit_price": 15.0,
+          "amount": 30.0
+        },
+        {
+          "name": "epdm颗粒",
+          "qty": 10.0,
+          "unit": "Kg/㎡",
+          "unit_price": 6.0,
+          "amount": 60.0
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 10.0,
+          "amount": 2.0
+        }
+      ],
+      "summary": {
+        "材料造价": 95.0,
+        "施工费": 20.0,
+        "运费": 5.0,
+        "税费": 9.6,
+        "总合计": 129.6
+      },
+      "title": "EPDM颗粒（水泥/沥青基础）面层材料用量及造价预算方案(9mm)",
+      "type": "EPDM",
+      "thickness": "9mm",
+      "tags": [],
+      "search_keywords": "epdm 9mm"
+    },
+    {
+      "filename": "9MM硅pu材料报价.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.3,
+          "unit": "Kg/㎡",
+          "unit_price": 16.0,
+          "amount": 4.8
+        },
+        {
+          "name": "硅pu主材",
+          "qty": 4.2,
+          "unit": "Kg/㎡",
+          "unit_price": 7.5,
+          "amount": 31.5
+        },
+        {
+          "name": "硅pu面漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 33.0,
+          "amount": 6.6000000000000005
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.5,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 6.0
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.1,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.05
+        },
+        {
+          "name": "界线漆",
+          "qty": 0.01,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.45
+        }
+      ],
+      "summary": {
+        "材料造价": 77.39999999999999,
+        "施工费": 18.0,
+        "总合计": 95.39999999999999
+      },
+      "title": "硅pu球场（水泥基础）面层材料用量及造价预算方案(9mm)",
+      "type": "硅PU",
+      "thickness": "9mm",
+      "tags": [],
+      "search_keywords": "硅pu 9mm"
+    },
+    {
+      "filename": "9mm全塑型跑道材料报价（发泡自结纹）.xlsx",
+      "materials": [
+        {
+          "name": "防水底漆",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 17.0,
+          "amount": 3.4
+        },
+        {
+          "name": "TPU底胶",
+          "qty": 4.5,
+          "unit": "Kg/㎡",
+          "unit_price": 9.5,
+          "amount": 42.75
+        },
+        {
+          "name": "清浆料",
+          "qty": 1.5,
+          "unit": "Kg/㎡",
+          "unit_price": 8.2,
+          "amount": 12.3
+        },
+        {
+          "name": "自结纹红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.2,
+          "unit": "Kg/㎡",
+          "unit_price": 18.3,
+          "amount": 21.96
+        },
+        {
+          "name": "红胶粉",
+          "qty": 0.06,
+          "unit": "Kg/㎡",
+          "unit_price": 4.0,
+          "amount": 0.24
+        },
+        {
+          "name": "石英砂",
+          "qty": 0.4,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.2
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.02,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.9
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.04,
+          "unit": "Kg/㎡",
+          "unit_price": 30.0,
+          "amount": 1.2
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 2.4
+        }
+      ],
+      "summary": {
+        "材料造价": 85.35,
+        "施工费": 15.0,
+        "运费": 3.0,
+        "总合计": 103.35
+      },
+      "title": "全塑型跑道（水泥/沥青基础）面层材料用量及造价预算方案(9mm)",
+      "type": "全塑型跑道",
+      "thickness": "9mm",
+      "tags": [
+        "发泡",
+        "自结纹"
+      ],
+      "search_keywords": "全塑型跑道 9mm 发泡 自结纹"
+    },
+    {
+      "filename": "免填充人造草休闲草报价（25mm）.xlsx",
+      "materials": [
+        {
+          "name": "足球场草坪",
+          "qty": 1.0,
+          "unit": "Kg/㎡",
+          "unit_price": 36.0,
+          "amount": 36.0
+        },
+        {
+          "name": "接缝布（赠送）",
+          "qty": 0.1,
+          "unit": "Kg/㎡",
+          "unit_price": null,
+          "amount": 0.0
+        },
+        {
+          "name": "专业粘接胶水 （14kg/桶）",
+          "qty": 0.07,
+          "unit": "Kg/㎡",
+          "unit_price": 22.0,
+          "amount": 1.54
+        }
+      ],
+      "summary": {
+        "材料造价": 37.54,
+        "施工费": 10.0,
+        "运费": 4.0,
+        "总合计": 51.54
+      },
+      "type": "人造草（足球场）",
+      "thickness": "25mm",
+      "tags": [
+        "免填充",
+        "休闲草"
+      ],
+      "search_keywords": "人造草（足球场） 25mm 免填充 休闲草"
+    },
+    {
+      "filename": "免填充足球人造草报价（30mm）.xlsx",
+      "materials": [
+        {
+          "name": "足球场草坪",
+          "qty": 1.0,
+          "unit": "Kg/㎡",
+          "unit_price": 36.0,
+          "amount": 36.0
+        },
+        {
+          "name": "接缝布（赠送）",
+          "qty": 0.1,
+          "unit": "Kg/㎡",
+          "unit_price": null,
+          "amount": 0.0
+        },
+        {
+          "name": "专业粘接胶水 （14kg/桶）",
+          "qty": 0.07,
+          "unit": "Kg/㎡",
+          "unit_price": 22.0,
+          "amount": 1.54
+        }
+      ],
+      "summary": {
+        "材料造价": 37.54,
+        "施工费": 4.0,
+        "税费": 3.3232,
+        "总合计": 44.8632
+      },
+      "type": "人造草（足球场）",
+      "thickness": "30mm",
+      "tags": [
+        "免填充"
+      ],
+      "search_keywords": "人造草（足球场） 30mm 免填充"
+    },
+    {
+      "filename": "填充人造草足球场报价 50mm.xlsx",
+      "materials": [
+        {
+          "name": "足球场草坪",
+          "qty": 1.0,
+          "unit": "Kg/㎡",
+          "unit_price": 24.0,
+          "amount": 24.0
+        },
+        {
+          "name": "接缝布（赠送）",
+          "qty": 0.1,
+          "unit": "Kg/㎡",
+          "unit_price": null,
+          "amount": 0.0
+        },
+        {
+          "name": "专业粘接胶水 （14kg/桶）",
+          "qty": 0.07,
+          "unit": "Kg/㎡",
+          "unit_price": 22.0,
+          "amount": 1.54
+        },
+        {
+          "name": "黑颗粒",
+          "qty": 5.0,
+          "unit": "Kg/㎡",
+          "unit_price": 2.0,
+          "amount": 10.0
+        },
+        {
+          "name": "石英砂  （建议当地购买）",
+          "qty": 30.0,
+          "unit": "Kg/㎡",
+          "unit_price": 0.4,
+          "amount": 12.0
+        },
+        {
+          "name": "减震垫",
+          "qty": 1.0,
+          "unit": "Kg/㎡",
+          "unit_price": 10.0,
+          "amount": 10.0
+        }
+      ],
+      "summary": {
+        "材料造价": 57.54,
+        "施工费": 5.0,
+        "运费": 4.0,
+        "税费": 5.3232,
+        "总合计": 79.8632
+      },
+      "type": "人造草（足球场）",
+      "thickness": "50mm",
+      "tags": [
+        "填充型"
+      ],
+      "search_keywords": "人造草（足球场） 50mm 填充型"
+    },
+    {
+      "filename": "弹性丙烯酸.xlsx",
+      "materials": [
+        {
+          "name": "丙烯酸防水底漆 （D-68乳液）",
+          "qty": 0.15,
+          "unit": "Kg/㎡",
+          "unit_price": 10.0,
+          "amount": 1.5
+        },
+        {
+          "name": "弹性1号",
+          "qty": 2.0,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 24.0
+        },
+        {
+          "name": "弹性2号",
+          "qty": 1.0,
+          "unit": "Kg/㎡",
+          "unit_price": 12.0,
+          "amount": 12.0
+        },
+        {
+          "name": "封闭乳液",
+          "qty": 0.4,
+          "unit": "Kg/㎡",
+          "unit_price": 10.0,
+          "amount": 4.0
+        },
+        {
+          "name": "石英沙(80-100目)",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 0.5,
+          "amount": 0.1
+        },
+        {
+          "name": "划线漆",
+          "qty": 0.01,
+          "unit": "Kg/㎡",
+          "unit_price": 35.0,
+          "amount": 0.35
+        }
+      ],
+      "summary": {
+        "材料造价": 49.45,
+        "运费": 1.5,
+        "总合计": 50.95
+      },
+      "title": "弹性丙烯酸球场（水泥基础）面层材料用量及造价预算方案(5mm)",
+      "type": "弹性丙烯酸",
+      "thickness": "5mm",
+      "tags": [],
+      "search_keywords": "弹性丙烯酸 5mm"
+    },
+    {
+      "filename": "报价单（安涂森）.xlsx",
+      "materials": [],
+      "summary": {}
+    },
+    {
+      "filename": "报价清单.xlsx",
+      "materials": [
+        {
+          "name": "单组份胶水",
+          "qty": 0.2,
+          "unit": "Kg/㎡",
+          "unit_price": 12.5,
+          "amount": 2.5
+        },
+        {
+          "name": "单组份胶水",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 12.5,
+          "amount": 13.75
+        },
+        {
+          "name": "红颗粒",
+          "qty": 7.5,
+          "unit": "Kg/㎡",
+          "unit_price": 3.8,
+          "amount": 28.5
+        },
+        {
+          "name": "跑道红色喷涂面漆(A组:B组=1:2)",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 13.0,
+          "amount": 14.3
+        },
+        {
+          "name": "红色EPDM颗粒",
+          "qty": 1.1,
+          "unit": "Kg/㎡",
+          "unit_price": 5.0,
+          "amount": 5.5
+        },
+        {
+          "name": "划线漆 (A组:B组=1:1)",
+          "qty": 0.015,
+          "unit": "Kg/㎡",
+          "unit_price": 45.0,
+          "amount": 0.675
+        },
+        {
+          "name": "催化剂",
+          "qty": 0.02,
+          "unit": "Kg/㎡",
+          "unit_price": 40.0,
+          "amount": 0.8
+        },
+        {
+          "name": "稀释剂",
+          "qty": 0.15,
+          "unit": "Kg/㎡",
+          "unit_price": 10.0,
+          "amount": 1.5
+        }
+      ],
+      "summary": {
+        "材料造价": 67.525,
+        "施工费": 13.0,
+        "运费": 2.5,
+        "税费": 6.642,
+        "总合计": 89.667
+      },
+      "title": "透气型跑道（水泥/沥青基础）面层材料用量及造价预算方案(13mm)",
+      "type": "其他",
+      "thickness": "13mm",
+      "tags": [],
+      "search_keywords": "其他 13mm"
+    }
+  ],
+  "errors": [
+    "5mmEPDM材料报(英文版)价.xlsx: 未提取到材料",
+    "报价单（安涂森）.xlsx: 未提取到材料"
+  ]
+}

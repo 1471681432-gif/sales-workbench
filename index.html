@@ -496,6 +496,11 @@
         <span>报价模板</span>
         <span class="nav-badge" id="badgeTemplates">0</span>
       </button>
+      <button class="nav-item" data-page="quotes" style="background:linear-gradient(135deg,#fef3c7,#fde68a);margin-top:4px">
+        <svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span>智能报价</span>
+        <span class="nav-badge" id="badgeQuotes" style="background:#f59e0b;color:#fff">AI</span>
+      </button>
     </nav>
     <div class="sidebar-foot">个人销售管理 · v2.0 · 小伊</div>
   </aside>
@@ -1113,6 +1118,7 @@ function render(){
   else if(currentPage==='targets')c.innerHTML=targetsHtml();
   else if(currentPage==='scripts')c.innerHTML=scriptsHtml();
   else if(currentPage==='templates')c.innerHTML=templatesHtml();
+  else if(currentPage==='quotes'){c.innerHTML=quotesHtml();setTimeout(quoteFilter,50);}
   updateBadges();
   if(currentPage==='dashboard')initCharts();
   if(currentPage==='funnel')initFunnelChart();
@@ -1122,6 +1128,158 @@ function render(){
     const c=document.getElementById('pageContent');
     c.innerHTML='<div style="padding:40px;background:#fee2e2;border-radius:12px;margin:20px"><h2 style="color:#dc2626">页面加载出错</h2><p style="color:#991b1b">'+e.message+'</p><pre style="background:#fff;padding:12px;border-radius:8px;overflow:auto;font-size:12px">'+e.stack+'</pre></div>';
   }
+}
+
+/* ============ 智能报价助手 ============ */
+const QUOTES_DATA=[{"f":"10MM硅pu材料报价（微发泡）.xlsx","t":"硅PU","h":"10mm","g":["发泡","微发泡"],"s":{"材料造价":87.1,"施工费":15,"运费":6,"税费":8.65,"总合计":116.75},"tp":116.75,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":17,"a":3.4},{"n":"TPU主材","q":4.9,"u":"Kg/㎡","p":9,"a":44.1},{"n":"硅pu主材","q":3.4,"u":"Kg/㎡","p":8.5,"a":28.9},{"n":"硅pu面漆","q":0.2,"u":"Kg/㎡","p":33,"a":6.6},{"n":"稀释剂","q":0.3,"u":"Kg/㎡","p":12,"a":3.6},{"n":"石英砂","q":0.1,"u":"Kg/㎡","p":0.5,"a":0.05},{"n":"界线漆","q":0.01,"u":"Kg/㎡","p":45,"a":0.45}]},{"f":"10mm全塑型跑道材料报价（发泡自结纹）.xlsx","t":"全塑型跑道","h":"10mm","g":["发泡","自结纹"],"s":{"材料造价":97.27,"施工费":15,"运费":4,"税费":9.3,"总合计":125.57},"tp":125.57,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"TPU底胶","q":5.6,"u":"Kg/㎡","p":9.5,"a":53.2},{"n":"清浆料","q":1.5,"u":"Kg/㎡","p":8.3,"a":12.45},{"n":"自结纹红色喷涂面漆(A组:B组=1:2)","q":1.2,"u":"Kg/㎡","p":19,"a":22.8},{"n":"红胶粉","q":0.06,"u":"Kg/㎡","p":2,"a":0.12},{"n":"石英砂","q":0.4,"u":"Kg/㎡","p":0.5,"a":0.2},{"n":"划线漆 (A组:B组=1:1)","q":0.02,"u":"Kg/㎡","p":45,"a":0.9},{"n":"催化剂","q":0.04,"u":"Kg/㎡","p":40,"a":1.6},{"n":"稀释剂","q":0.2,"u":"Kg/㎡","p":12,"a":2.4}]},{"f":"10mm硅pu材料报价（微发泡） (2).xlsx","t":"硅PU","h":"10mm","g":["发泡","微发泡"],"s":{"材料造价":90.6,"施工费":16,"运费":1.6,"税费":8.66,"总合计":116.86},"tp":116.86,"m":[{"n":"防水底漆","q":0.3,"u":"Kg/㎡","p":17,"a":5.1},{"n":"TPU主材","q":5.1,"u":"Kg/㎡","p":9,"a":45.9},{"n":"硅pu主材","q":3.4,"u":"Kg/㎡","p":8.5,"a":28.9},{"n":"硅pu面漆","q":0.2,"u":"Kg/㎡","p":33,"a":6.6},{"n":"稀释剂","q":0.3,"u":"Kg/㎡","p":12,"a":3.6},{"n":"石英砂","q":0.1,"u":"Kg/㎡","p":0.5,"a":0.05},{"n":"界线漆","q":0.01,"u":"Kg/㎡","p":45,"a":0.45}]},{"f":"13mmEPDM材料报价（红、白颗粒打底）.xlsx","t":"EPDM","h":"13mm","g":["红/白颗粒"],"s":{"材料造价":101.34,"施工费":20,"运费":4,"税费":9.77,"总合计":135.11},"tp":135.11,"m":[{"n":"单组份胶水","q":0.2,"u":"Kg/㎡","p":17,"a":3.4},{"n":"单组份胶水","q":2.2,"u":"Kg/㎡","p":17,"a":37.4},{"n":"epdm颗粒","q":6.5,"u":"Kg/㎡","p":6,"a":39},{"n":"epdm颗粒","q":4.2,"u":"Kg/㎡","p":4.4,"a":18.48},{"n":"稀释剂","q":0.15,"u":"Kg/㎡","p":12,"a":1.8},{"n":"划线漆","q":0.03,"u":"Kg/㎡","p":42,"a":1.26}]},{"f":"13mmEPDM材料报价（老国标）.xlsx","t":"EPDM","h":"13mm","g":["老国标"],"s":{"材料造价":74.45,"施工费":20,"运费":10,"税费":6.03,"总合计":110.48},"tp":110.48,"m":[{"n":"单组份胶水","q":3.2,"u":"Kg/㎡","p":17,"a":54.4},{"n":"epdm颗粒","q":2.8,"u":"Kg/㎡","p":6,"a":16.8},{"n":"稀释剂","q":0.15,"u":"Kg/㎡","p":11,"a":1.65},{"n":"划线漆","q":0.02,"u":"Kg/㎡","p":80,"a":1.6}]},{"f":"13mmEPDM材料报价（花颗粒）.xlsx","t":"EPDM","h":"13mm","g":["花颗粒"],"s":{"材料造价":66.9,"施工费":15,"运费":4,"税费":6.82,"总合计":92.72},"tp":92.72,"m":[{"n":"单组份胶水","q":0.2,"u":"Kg/㎡","p":17,"a":3.4},{"n":"单组份胶水","q":2.2,"u":"Kg/㎡","p":17,"a":37.4},{"n":"epdm颗粒","q":2.8,"u":"Kg/㎡","p":6,"a":16.8},{"n":"epdm颗粒","q":1.2,"u":"Kg/㎡","p":5,"a":6},{"n":"稀释剂","q":0.15,"u":"Kg/㎡","p":12,"a":1.8},{"n":"划线漆","q":0.015,"u":"Kg/㎡","p":100,"a":1.5}]},{"f":"13mmEPDM材料报价（黑颗粒）.xlsx","t":"EPDM","h":"13mm","g":["黑颗粒"],"s":{"材料造价":65.4,"施工费":20,"运费":4,"税费":6.72,"总合计":96.12},"tp":96.12,"m":[{"n":"单组份胶水","q":0.2,"u":"Kg/㎡","p":17,"a":3.4},{"n":"单组份胶水","q":2.2,"u":"Kg/㎡","p":17,"a":37.4},{"n":"epdm颗粒","q":3.6,"u":"Kg/㎡","p":5,"a":18},{"n":"稀释剂","q":0.15,"u":"Kg/㎡","p":12,"a":1.8},{"n":"划线漆","q":0.04,"u":"Kg/㎡","p":120,"a":4.8}]},{"f":"13mm全塑型SPU跑道材料报价.xlsx","t":"全塑型跑道","h":"13mm","g":[],"s":{"材料造价":94.47,"施工费":20,"运费":4,"税费":8.13,"总合计":126.6},"tp":126.6,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"SPU底胶","q":7.2,"u":"Kg/㎡","p":9.5,"a":68.4},{"n":"清浆料","q":0.5,"u":"Kg/㎡","p":9,"a":4.5},{"n":"面漆A组","q":0.6,"u":"Kg/㎡","p":19,"a":11.4},{"n":"面漆B组","q":0.3,"u":"Kg/㎡","p":19,"a":5.7},{"n":"石英砂","q":0.4,"u":"Kg/㎡","p":0.5,"a":0.2},{"n":"划线漆","q":0.02,"u":"Kg/㎡","p":30,"a":0.6},{"n":"催化剂","q":0.001,"u":"Kg/㎡","p":70,"a":0.07}]},{"f":"13mm全塑型pu跑道材料报价.xlsx","t":"全塑型跑道","h":"13mm","g":[],"s":{"材料造价":102.25,"施工费":25,"运费":6,"税费":9,"总合计":142.25},"tp":142.25,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"PU底胶","q":9,"u":"Kg/㎡","p":9,"a":81},{"n":"清浆料","q":0.6,"u":"Kg/㎡","p":8,"a":4.8},{"n":"面漆","q":0.5,"u":"Kg/㎡","p":22,"a":11},{"n":"石英砂","q":0.5,"u":"Kg/㎡","p":0.5,"a":0.25},{"n":"划线漆","q":0.02,"u":"Kg/㎡","p":40,"a":0.8},{"n":"催化剂","q":0.01,"u":"Kg/㎡","p":80,"a":0.8}]},{"f":"13mm全塑型自结纹TPU跑道材料报价.xlsx","t":"全塑型跑道","h":"13mm","g":["自结纹"],"s":{"材料造价":111.72,"施工费":13,"运费":1.6,"税费":6.83,"总合计":133.15},"tp":133.15,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"底涂","q":1.2,"u":"Kg/㎡","p":9,"a":10.8},{"n":"弹性层","q":6.5,"u":"Kg/㎡","p":9,"a":58.5},{"n":"加强层","q":1.5,"u":"Kg/㎡","p":9,"a":13.5},{"n":"自结纹面漆(A组:B组=2:1)","q":1.5,"u":"Kg/㎡","p":15,"a":22.5},{"n":"划线漆(A组:B组=1:1)","q":0.02,"u":"Kg/㎡","p":40,"a":0.8},{"n":"石英砂","q":0.43,"u":"Kg/㎡","p":0.5,"a":0.22},{"n":"催化剂","q":0.02,"u":"Kg/㎡","p":40,"a":0.8},{"n":"稀释剂","q":0.1,"u":"Kg/㎡","p":12,"a":1.2}]},{"f":"13mm全塑型自结纹跑道材料报价.xlsx","t":"全塑型跑道","h":"13mm","g":["自结纹"],"s":{"材料造价":108.5,"施工费":15,"运费":5,"税费":7.96,"总合计":136.46},"tp":136.46,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"底涂","q":1.5,"u":"Kg/㎡","p":12,"a":18},{"n":"弹性层","q":6,"u":"Kg/㎡","p":9.5,"a":57},{"n":"加强层","q":1.5,"u":"Kg/㎡","p":8,"a":12},{"n":"自结纹面漆","q":1.3,"u":"Kg/㎡","p":12,"a":15.6},{"n":"划线漆","q":0.02,"u":"Kg/㎡","p":45,"a":0.9},{"n":"催化剂","q":0.02,"u":"Kg/㎡","p":40,"a":0.8},{"n":"稀释剂","q":0.05,"u":"Kg/㎡","p":12,"a":0.6}]},{"f":"13mm复合型跑道报价（新国标）.xlsx","t":"复合型跑道","h":"13mm","g":["新国标"],"s":{"材料造价":82.69,"施工费":22,"运费":3,"税费":7.03,"总合计":114.73},"tp":114.73,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"单组份胶水","q":1.2,"u":"Kg/㎡","p":17,"a":20.4},{"n":"epdm颗粒","q":2.2,"u":"Kg/㎡","p":6,"a":13.2},{"n":"PU底胶","q":2.8,"u":"Kg/㎡","p":9,"a":25.2},{"n":"epdm颗粒","q":0.8,"u":"Kg/㎡","p":4.5,"a":3.6},{"n":"面漆","q":0.5,"u":"Kg/㎡","p":22,"a":11},{"n":"划线漆","q":0.03,"u":"Kg/㎡","p":55,"a":1.65},{"n":"催化剂","q":0.01,"u":"Kg/㎡","p":80,"a":0.8},{"n":"石英砂","q":1,"u":"Kg/㎡","p":0.44,"a":0.44},{"n":"稀释剂","q":0.2,"u":"Kg/㎡","p":14,"a":2.8}]},{"f":"13mm混合型跑道材料报价（发泡新国标）.xlsx","t":"混合型跑道","h":"13mm","g":["发泡","新国标"],"s":{"材料造价":88.96,"施工费":22,"运费":3,"税费":7.14,"总合计":121.09},"tp":121.09,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"PU底胶","q":6,"u":"Kg/㎡","p":9,"a":54},{"n":"epdm颗粒","q":2.6,"u":"Kg/㎡","p":6,"a":15.6},{"n":"面漆","q":0.5,"u":"Kg/㎡","p":22,"a":11},{"n":"划线漆","q":0.015,"u":"Kg/㎡","p":60,"a":0.9},{"n":"催化剂","q":0.01,"u":"Kg/㎡","p":80,"a":0.8},{"n":"石英砂","q":0.8,"u":"Kg/㎡","p":0.45,"a":0.36},{"n":"稀释剂","q":0.2,"u":"Kg/㎡","p":13,"a":2.6}]},{"f":"13mm混合型跑道材料报价（新国标）.xlsx","t":"混合型跑道","h":"13mm","g":["新国标"],"s":{"材料造价":102.48,"施工费":25,"运费":3,"税费":7.84,"总合计":138.32},"tp":138.32,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"PU底胶","q":7.4,"u":"Kg/㎡","p":9,"a":66.6},{"n":"epdm颗粒","q":2.4,"u":"Kg/㎡","p":6,"a":14.4},{"n":"面漆","q":0.5,"u":"Kg/㎡","p":28,"a":14},{"n":"划线漆","q":0.02,"u":"Kg/㎡","p":45,"a":0.9},{"n":"催化剂","q":0.01,"u":"Kg/㎡","p":80,"a":0.8},{"n":"石英砂","q":1,"u":"Kg/㎡","p":0.48,"a":0.48},{"n":"稀释剂","q":0.2,"u":"Kg/㎡","p":14,"a":2.8}]},{"f":"13mm混合型跑道材料报价（老国标）.xlsx","t":"混合型跑道","h":"13mm","g":["老国标"],"s":{"材料造价":86.75,"施工费":22,"运费":5,"税费":7.38,"总合计":121.12},"tp":121.12,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"PU底胶","q":5.8,"u":"Kg/㎡","p":9,"a":52.2},{"n":"epdm颗粒","q":3.5,"u":"Kg/㎡","p":5,"a":17.5},{"n":"面漆","q":0.5,"u":"Kg/㎡","p":22,"a":11},{"n":"划线漆","q":0.02,"u":"Kg/㎡","p":45,"a":0.9},{"n":"催化剂","q":0.01,"u":"Kg/㎡","p":80,"a":0.8},{"n":"石英砂","q":0.5,"u":"Kg/㎡","p":0.5,"a":0.25},{"n":"稀释剂","q":0.15,"u":"Kg/㎡","p":12,"a":1.8}]},{"f":"13mm透气型跑道报价（白颗粒打底）.xlsx","t":"透气型跑道","h":"13mm","g":["白颗粒"],"s":{"材料造价":66.59,"施工费":16,"运费":3,"税费":5.66,"总合计":91.25},"tp":91.25,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"单组份胶水","q":1.5,"u":"Kg/㎡","p":17,"a":25.5},{"n":"epdm颗粒","q":2.2,"u":"Kg/㎡","p":5,"a":11},{"n":"epdm颗粒","q":2.2,"u":"Kg/㎡","p":6,"a":13.2},{"n":"面漆","q":0.5,"u":"Kg/㎡","p":22,"a":11},{"n":"划线漆","q":0.03,"u":"Kg/㎡","p":55,"a":1.65},{"n":"石英砂","q":0.5,"u":"Kg/㎡","p":0.48,"a":0.24},{"n":"稀释剂","q":0.2,"u":"Kg/㎡","p":13,"a":2.6}]},{"f":"13mm透气型跑道材料报价（红颗粒）.xlsx","t":"透气型跑道","h":"13mm","g":["红颗粒"],"s":{"材料造价":73.09,"施工费":18,"运费":4,"税费":6.89,"总合计":101.97},"tp":101.97,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"单组份胶水","q":1.5,"u":"Kg/㎡","p":17,"a":25.5},{"n":"epdm颗粒","q":3.5,"u":"Kg/㎡","p":6,"a":21},{"n":"epdm颗粒","q":1.8,"u":"Kg/㎡","p":6,"a":10.8},{"n":"面漆","q":0.5,"u":"Kg/㎡","p":22,"a":11},{"n":"划线漆","q":0.03,"u":"Kg/㎡","p":55,"a":1.65},{"n":"石英砂","q":0.5,"u":"Kg/㎡","p":0.48,"a":0.24},{"n":"稀释剂","q":0.2,"u":"Kg/㎡","p":13,"a":2.6}]},{"f":"13mm透气型跑道材料报价（老国标）.xlsx","t":"透气型跑道","h":"13mm","g":["老国标"],"s":{"材料造价":59.2,"施工费":20,"运费":6,"税费":5.01,"总合计":90.21},"tp":90.21,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"单组份胶水","q":1.2,"u":"Kg/㎡","p":15,"a":18},{"n":"epdm颗粒","q":2.2,"u":"Kg/㎡","p":5,"a":11},{"n":"epdm颗粒","q":1.8,"u":"Kg/㎡","p":6,"a":10.8},{"n":"面漆","q":0.5,"u":"Kg/㎡","p":28,"a":14},{"n":"划线漆","q":0.03,"u":"Kg/㎡","p":55,"a":1.65},{"n":"石英砂","q":0.5,"u":"Kg/㎡","p":0.48,"a":0.24},{"n":"稀释剂","q":0.2,"u":"Kg/㎡","p":13,"a":2.6}]},{"f":"13mm透气型跑道材料报价（花颗粒）.xlsx","t":"透气型跑道","h":"13mm","g":["花颗粒"],"s":{"材料造价":51.41,"施工费":15,"运费":6,"税费":4.32,"总合计":76.73},"tp":76.73,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"单组份胶水","q":1.5,"u":"Kg/㎡","p":15,"a":22.5},{"n":"epdm颗粒","q":2.6,"u":"Kg/㎡","p":5,"a":13},{"n":"epdm颗粒","q":1.5,"u":"Kg/㎡","p":5,"a":7},{"n":"面漆","q":0.5,"u":"Kg/㎡","p":9,"a":4.5},{"n":"划线漆","q":0.03,"u":"Kg/㎡","p":55,"a":1.65},{"n":"石英砂","q":0.5,"u":"Kg/㎡","p":0.48,"a":0.24},{"n":"稀释剂","q":0.2,"u":"Kg/㎡","p":13,"a":2.6}]},{"f":"20mmEPDM材料报价（花颗粒）.xlsx","t":"EPDM","h":"20mm","g":["花颗粒"],"s":{"材料造价":106.4,"施工费":18,"运费":5,"税费":9.42,"总合计":138.82},"tp":138.82,"m":[{"n":"单组份胶水","q":0.2,"u":"Kg/㎡","p":17,"a":3.4},{"n":"单组份胶水","q":2,"u":"Kg/㎡","p":17,"a":34},{"n":"epdm颗粒","q":3,"u":"Kg/㎡","p":7,"a":21},{"n":"epdm颗粒","q":7,"u":"Kg/㎡","p":6,"a":42},{"n":"稀释剂","q":0.3,"u":"Kg/㎡","p":12,"a":3.6},{"n":"划线漆","q":0.02,"u":"Kg/㎡","p":120,"a":2.4}]},{"f":"2mm丙烯酸材料报价.xlsx","t":"丙烯酸","h":"2mm","g":[],"s":{"材料造价":14.55,"施工费":15,"运费":4,"税费":2.68,"总合计":36.23},"tp":36.23,"m":[{"n":"D68乳液","q":0.4,"u":"Kg/㎡","p":14,"a":5.6},{"n":"108胶水","q":0.2,"u":"Kg/㎡","p":4,"a":0.8},{"n":"石英砂60~80","q":1.2,"u":"Kg/㎡","p":0.5,"a":0.6},{"n":"面漆","q":0.5,"u":"Kg/㎡","p":14,"a":7},{"n":"石英砂","q":0.2,"u":"Kg/㎡","p":0.5,"a":0.1},{"n":"界线漆","q":0.01,"u":"Kg/㎡","p":45,"a":0.45},{"n":"水泥","q":0.8,"u":"Kg/㎡","p":null,"a":null}]},{"f":"2mm丙烯酸看台材料报价.xlsx","t":"丙烯酸（看台）","h":"2mm","g":["看台"],"s":{"材料造价":10.2,"施工费":8,"运费":4,"税费":3.15,"总合计":25.35},"tp":25.35,"m":[{"n":"D68乳液","q":0.3,"u":"Kg/㎡","p":14,"a":4.2},{"n":"108胶水","q":0.3,"u":"Kg/㎡","p":4,"a":1.2},{"n":"石英砂","q":0.6,"u":"Kg/㎡","p":0.5,"a":0.3},{"n":"面漆","q":0.3,"u":"Kg/㎡","p":14,"a":4.2},{"n":"界线漆","q":0.01,"u":"Kg/㎡","p":45,"a":0.45},{"n":"水泥","q":0.8,"u":"Kg/㎡","p":null,"a":null}]},{"f":"4MM硅pu材料报价 。.xlsx","t":"硅PU","h":"4mm","g":[],"s":{"材料造价":46.2,"施工费":14,"运费":1,"税费":2.7,"总合计":63.9},"tp":63.9,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"硅pu主材","q":4.6,"u":"Kg/㎡","p":8.8,"a":40.48},{"n":"硅pu面漆","q":0.2,"u":"Kg/㎡","p":10,"a":2},{"n":"稀释剂","q":0.2,"u":"Kg/㎡","p":12,"a":2.4},{"n":"石英砂","q":0.045,"u":"Kg/㎡","p":0.5,"a":0.02},{"n":"界线漆","q":0.01,"u":"Kg/㎡","p":45,"a":0.45}]},{"f":"4MM硅pu材料报价.xlsx","t":"硅PU","h":"4mm","g":[],"s":{"材料造价":53.58,"施工费":14,"运费":3,"税费":6,"总合计":76.58},"tp":76.58,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"硅pu主材","q":4.6,"u":"Kg/㎡","p":8.8,"a":40.48},{"n":"硅pu面漆","q":0.2,"u":"Kg/㎡","p":33,"a":6.6},{"n":"稀释剂","q":0.2,"u":"Kg/㎡","p":12,"a":2.4},{"n":"石英砂","q":0.1,"u":"Kg/㎡","p":0.5,"a":0.05},{"n":"界线漆","q":0.01,"u":"Kg/㎡","p":45,"a":0.45}]},{"f":"50mmEPDM材料报价.xlsx","t":"EPDM","h":"50mm","g":[],"s":{"材料造价":115.2,"施工费":30,"运费":5,"税费":8.75,"总合计":158.95},"tp":158.95,"m":[{"n":"单组份胶水","q":0.2,"u":"Kg/㎡","p":17,"a":3.4},{"n":"单组份胶水","q":2,"u":"Kg/㎡","p":17,"a":34},{"n":"epdm颗粒","q":10,"u":"Kg/㎡","p":6,"a":60},{"n":"epdm颗粒","q":3.5,"u":"Kg/㎡","p":4.5,"a":15.75},{"n":"稀释剂","q":0.15,"u":"Kg/㎡","p":11,"a":1.65},{"n":"划线漆","q":0.02,"u":"Kg/㎡","p":80,"a":1.6}]},{"f":"5MM硅pu材料报价.xlsx","t":"硅PU","h":"5mm","g":[],"s":{"材料造价":52.93,"施工费":12,"运费":4,"税费":5.36,"总合计":74.29},"tp":74.29,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"硅pu主材","q":4.8,"u":"Kg/㎡","p":8.8,"a":42.24},{"n":"硅pu面漆","q":0.25,"u":"Kg/㎡","p":20,"a":5},{"n":"稀释剂","q":0.2,"u":"Kg/㎡","p":12,"a":2.4},{"n":"石英砂","q":0.1,"u":"Kg/㎡","p":0.5,"a":0.05},{"n":"界线漆","q":0.01,"u":"Kg/㎡","p":45,"a":0.45}]},{"f":"5mmEPDM材料报价..xlsx","t":"EPDM","h":"5mm","g":[],"s":{"材料造价":60.8,"施工费":20,"运费":1.2,"税费":5.54,"总合计":87.54},"tp":87.54,"m":[{"n":"单组份胶水","q":0.2,"u":"Kg/㎡","p":16,"a":3.2},{"n":"单组份胶水","q":1.2,"u":"Kg/㎡","p":16,"a":19.2},{"n":"epdm颗粒","q":6,"u":"Kg/㎡","p":6,"a":36},{"n":"稀释剂","q":0.1,"u":"Kg/㎡","p":11,"a":1.1}]},{"f":"5mmEPDM材料报价.xlsx","t":"EPDM","h":"5mm","g":[],"s":{"材料造价":61,"施工费":30,"运费":0,"税费":7.28,"总合计":98.28},"tp":98.28,"m":[{"n":"单组份胶水","q":0.2,"u":"Kg/㎡","p":17,"a":3.4},{"n":"单组份胶水","q":1.2,"u":"Kg/㎡","p":17,"a":20.4},{"n":"epdm颗粒","q":6,"u":"Kg/㎡","p":6,"a":36},{"n":"稀释剂","q":0.1,"u":"Kg/㎡","p":12,"a":1.2}]},{"f":"5mm弹性丙烯酸报价.xlsx","t":"弹性丙烯酸","h":"5mm","g":[],"s":{"材料造价":63.68,"施工费":25,"运费":8,"税费":5.24,"总合计":101.92},"tp":101.92,"m":[{"n":"D68乳液","q":0.6,"u":"Kg/㎡","p":14,"a":8.4},{"n":"108胶水","q":1,"u":"Kg/㎡","p":4,"a":4},{"n":"石英砂60~80","q":2,"u":"Kg/㎡","p":0.5,"a":1},{"n":"面漆","q":0.6,"u":"Kg/㎡","p":14,"a":8.4},{"n":"界线漆","q":0.01,"u":"Kg/㎡","p":45,"a":0.45}]},{"f":"6MM硅pu材料报价.xlsx","t":"硅PU","h":"6mm","g":[],"s":{"材料造价":65.41,"施工费":18,"运费":5,"税费":6.67,"总合计":95.08},"tp":95.08,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"硅pu主材","q":6.3,"u":"Kg/㎡","p":8.8,"a":55.44},{"n":"硅pu面漆","q":0.25,"u":"Kg/㎡","p":20,"a":5},{"n":"稀释剂","q":0.25,"u":"Kg/㎡","p":12,"a":3},{"n":"石英砂","q":0.15,"u":"Kg/㎡","p":0.5,"a":0.08},{"n":"界线漆","q":0.01,"u":"Kg/㎡","p":45,"a":0.45}]},{"f":"8MM硅pu材料报价.xlsx","t":"硅PU","h":"8mm","g":[],"s":{"材料造价":89.38,"施工费":18,"运费":12,"税费":8.58,"总合计":127.96},"tp":127.96,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":20,"a":4},{"n":"硅pu主材","q":8,"u":"Kg/㎡","p":8.8,"a":70.4},{"n":"硅pu面漆","q":0.25,"u":"Kg/㎡","p":33,"a":8.25},{"n":"稀释剂","q":0.25,"u":"Kg/㎡","p":12,"a":3},{"n":"石英砂","q":0.2,"u":"Kg/㎡","p":0.5,"a":0.1},{"n":"界线漆","q":0.01,"u":"Kg/㎡","p":45,"a":0.45}]},{"f":"8mmEPDM材料报价..xlsx","t":"EPDM","h":"8mm","g":[],"s":{"材料造价":95.6,"施工费":25,"运费":2,"税费":7,"总合计":129.6},"tp":129.6,"m":[{"n":"单组份胶水","q":0.2,"u":"Kg/㎡","p":17,"a":3.4},{"n":"单组份胶水","q":2.2,"u":"Kg/㎡","p":17,"a":37.4},{"n":"epdm颗粒","q":6.5,"u":"Kg/㎡","p":6,"a":39},{"n":"epdm颗粒","q":3,"u":"Kg/㎡","p":5,"a":15}]},{"f":"9MM硅pu材料报价.xlsx","t":"硅PU","h":"9mm","g":[],"s":{"材料造价":72.8,"施工费":12,"运费":5,"税费":5.6,"总合计":95.4},"tp":95.4,"m":[{"n":"防水底漆","q":0.3,"u":"Kg/㎡","p":18,"a":5.4},{"n":"硅pu主材","q":7,"u":"Kg/㎡","p":8.8,"a":61.6},{"n":"硅pu面漆","q":0.25,"u":"Kg/㎡","p":20,"a":5},{"n":"稀释剂","q":0.25,"u":"Kg/㎡","p":12,"a":3},{"n":"石英砂","q":0.2,"u":"Kg/㎡","p":0.5,"a":0.1},{"n":"界线漆","q":0.01,"u":"Kg/㎡","p":45,"a":0.45}]},{"f":"9mm全塑型跑道材料报价（发泡自结纹）.xlsx","t":"全塑型跑道","h":"9mm","g":["发泡","自结纹"],"s":{"材料造价":80.7,"施工费":12,"运费":4,"税费":6.65,"总合计":103.35},"tp":103.35,"m":[{"n":"防水底漆","q":0.2,"u":"Kg/㎡","p":18,"a":3.6},{"n":"TPU底胶","q":4.8,"u":"Kg/㎡","p":9.5,"a":45.6},{"n":"清浆料","q":1.5,"u":"Kg/㎡","p":8.3,"a":12.45},{"n":"自结纹红色喷涂面漆(A组:B组=1:2)","q":1,"u":"Kg/㎡","p":19,"a":19},{"n":"红胶粉","q":0.05,"u":"Kg/㎡","p":2,"a":0.1},{"n":"石英砂","q":0.3,"u":"Kg/㎡","p":0.5,"a":0.15},{"n":"划线漆 (A组:B组=1:1)","q":0.02,"u":"Kg/㎡","p":45,"a":0.9},{"n":"催化剂","q":0.03,"u":"Kg/㎡","p":40,"a":1.2},{"n":"稀释剂","q":0.15,"u":"Kg/㎡","p":12,"a":1.8}]},{"f":"免填充人造草休闲草报价（25mm）.xlsx","t":"人造草（休闲草）","h":"25mm","g":["免填充","休闲草"],"s":{"材料造价":45.07,"施工费":6,"运费":0,"税费":0.47,"总合计":51.54},"tp":51.54,"m":[{"n":"休闲草","q":null,"u":"平方米","p":13,"a":null},{"n":"胶水","q":null,"u":"公斤","p":1.6,"a":null},{"n":"接缝布","q":null,"u":"米","p":null,"a":null}]},{"f":"免填充足球人造草报价（30mm）.xlsx","t":"人造草（足球场）","h":"30mm","g":["免填充"],"s":{"材料造价":32.22,"施工费":5,"运费":0,"税费":7.64,"总合计":44.86},"tp":44.86,"m":[{"n":"三筋W型单丝足球草","q":null,"u":"㎡","p":19,"a":null},{"n":"胶水","q":null,"u":"公斤","p":1.8,"a":null},{"n":"连接带","q":null,"u":"米","p":null,"a":null}]},{"f":"填充人造草足球场报价 50mm.xlsx","t":"人造草（足球场）","h":"50mm","g":["填充型"],"s":{"材料造价":48.8,"施工费":6,"运费":0,"税费":25.06,"总合计":79.86},"tp":79.86,"m":[{"n":"W型单丝足球草","q":null,"u":"㎡","p":24,"a":null},{"n":"环保颗粒","q":null,"u":"㎡","p":8,"a":null},{"n":"石英砂","q":null,"u":"吨","p":0.5,"a":null},{"n":"胶水","q":null,"u":"公斤","p":1.6,"a":null},{"n":"接缝布","q":null,"u":"米","p":null,"a":null},{"n":"减震垫","q":null,"u":"㎡","p":null,"a":null}]},{"f":"弹性丙烯酸.xlsx","t":"弹性丙烯酸","h":"5mm","g":[],"s":{"材料造价":32.74,"施工费":12,"运费":2,"税费":4.21,"总合计":50.95},"tp":50.95,"m":[{"n":"D68乳液","q":0.5,"u":"Kg/㎡","p":14,"a":7},{"n":"TPU主材","q":0.8,"u":"Kg/㎡","p":12,"a":9.6},{"n":"石英砂60~80","q":1.5,"u":"Kg/㎡","p":0.5,"a":0.75},{"n":"弹性层","q":0.8,"u":"Kg/㎡","p":12,"a":9.6},{"n":"面漆","q":0.4,"u":"Kg/㎡","p":14,"a":5.6},{"n":"界线漆","q":0.01,"u":"Kg/㎡","p":45,"a":0.45}]},{"f":"报价清单.xlsx","t":"其他","h":"13mm","g":[],"s":{"材料造价":56.4,"施工费":16,"运费":12,"税费":5.27,"总合计":89.67},"tp":89.67,"m":[{"n":"D68乳液底层","q":0.3,"u":"Kg/㎡","p":14,"a":4.2},{"n":"108胶水","q":0.2,"u":"Kg/㎡","p":4,"a":0.8},{"n":"石英砂60~80","q":1,"u":"Kg/㎡","p":0.5,"a":0.5},{"n":"D68乳液中层","q":0.4,"u":"Kg/㎡","p":14,"a":5.6},{"n":"D68乳液面层","q":0.5,"u":"Kg/㎡","p":14,"a":7},{"n":"面漆","q":0.6,"u":"Kg/㎡","p":14,"a":8.4},{"n":"石英砂","q":0.3,"u":"Kg/㎡","p":0.5,"a":0.15},{"n":"界线漆","q":0.01,"u":"Kg/㎡","p":45,"a":0.45}]}];
+
+function quotesHtml(){
+  // 获取所有类型和厚度
+  var types=[...new Set(QUOTES_DATA.map(function(q){return q.t;}))].sort();
+  return '<div class="page quotes-page" style="max-width:1100px;margin:0 auto">'+
+    '<div class="section-header"><h2>🧮 智能报价助手</h2><p style="color:var(--muted);font-size:13px;margin:0">输入材料类型和厚度，自动匹配合适的报价方案</p></div>'+
+    '<div class="card" style="margin-bottom:16px">'+
+      '<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">'+
+        '<select id="q_type" onchange="quoteFilter()" style="flex:1;min-width:180px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-size:14px;background:#fff">'+
+          '<option value="">全部材料类型</option>'+
+          types.map(function(t){return '<option value="'+t+'">'+t+'</option>';}).join('')+
+        '</select>'+
+        '<select id="q_thick" onchange="quoteFilter()" style="flex:1;min-width:140px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-size:14px;background:#fff">'+
+          '<option value="">全部厚度</option>'+
+        '</select>'+
+        '<input id="q_search" placeholder="或输入关键词搜索，如"硅PU 5mm"..." style="flex:2;min-width:200px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;font-size:14px" oninput="quoteFilter()">'+
+        '<button onclick="quoteFilter()" style="padding:10px 20px;background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap">🔍 搜索</button>'+
+      '</div>'+
+    '</div>'+
+    '<div id="q_results" style="display:flex;flex-direction:column;gap:12px"></div>'+
+  '</div>';
+}
+
+function quoteFilter(){
+  var type=document.getElementById('q_type').value;
+  var thick=document.getElementById('q_thick').value;
+  var search=(document.getElementById('q_search').value||'').toLowerCase();
+  
+  // 更新厚度下拉
+  var thickSelect=document.getElementById('q_thick');
+  var currentThick=thickSelect.value;
+  var thicknesses=[];
+  QUOTES_DATA.forEach(function(q){
+    if(!type||q.t===type){
+      if(thicknesses.indexOf(q.h)===-1)thicknesses.push(q.h);
+    }
+  });
+  thicknesses.sort(function(a,b){
+    var na=parseFloat(a), nb=parseFloat(b);
+    return na-nb;
+  });
+  thickSelect.innerHTML='<option value="">全部厚度</option>'+thicknesses.map(function(t){
+    return '<option value="'+t+'"'+(t===currentThick?' selected':'')+'>'+t+'</option>';
+  }).join('');
+  
+  // 筛选
+  var results=QUOTES_DATA.filter(function(q){
+    if(type&&q.t!==type)return false;
+    if(thick&&q.h!==thick)return false;
+    if(search){
+      var txt=(q.t+' '+q.h+' '+q.g.join(' ')+' '+q.f).toLowerCase();
+      if(txt.indexOf(search)===-1)return false;
+    }
+    return true;
+  });
+  
+  // 渲染结果
+  renderQuoteResults(results);
+}
+
+function renderQuoteResults(results){
+  var box=document.getElementById('q_results');
+  if(!results.length){
+    box.innerHTML='<div class="card" style="text-align:center;padding:40px;color:var(--muted)">'+
+      '<div style="font-size:48px;margin-bottom:12px">📋</div>'+
+      '<div style="font-size:16px;font-weight:600;color:var(--ink);margin-bottom:8px">未找到匹配的报价</div>'+
+      '<div style="font-size:13px">试试调整筛选条件，或输入其他关键词</div>'+
+    '</div>';
+    return;
+  }
+  
+  box.innerHTML=results.map(function(q,idx){
+    var tags=q.g.length?'<span style="display:inline-flex;gap:4px;flex-wrap:wrap">'+q.g.map(function(t){
+      return '<span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;font-size:11px">'+t+'</span>';
+    }).join('')+'</span>':'';
+    
+    var summary=q.s;
+    var summaryHtml='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;margin-top:12px">'+
+      Object.keys(summary).map(function(k){
+        var v=summary[k];
+        var isTotal=(k==='总合计');
+        var color=isTotal?'#dc2626':'var(--ink)';
+        var weight=isTotal?'700':'500';
+        var fontSize=isTotal?'16px':'13px';
+        return '<div style="background:'+(isTotal?'#fef2f2':'#f8fafc')+';padding:8px 10px;border-radius:8px;text-align:center">'+
+          '<div style="font-size:11px;color:var(--muted);margin-bottom:2px">'+k+'</div>'+
+          '<div style="font-weight:'+weight+';font-size:'+fontSize+';color:'+color+'">'+fmtMoney(v)+'</div>'+
+        '</div>';
+      }).join('')+
+    '</div>';
+    
+    var matTable='<table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:12px">'+
+      '<thead><tr style="background:#f8fafc">'+
+        '<th style="text-align:left;padding:6px 8px;border-bottom:2px solid var(--line)">材料名称</th>'+
+        '<th style="text-align:center;padding:6px 8px;border-bottom:2px solid var(--line);width:70px">用量</th>'+
+        '<th style="text-align:center;padding:6px 8px;border-bottom:2px solid var(--line);width:50px">单位</th>'+
+        '<th style="text-align:right;padding:6px 8px;border-bottom:2px solid var(--line);width:80px">单价</th>'+
+        '<th style="text-align:right;padding:6px 8px;border-bottom:2px solid var(--line);width:80px">金额</th>'+
+      '</tr></thead><tbody>'+
+      q.m.map(function(m){
+        var qty=m.q!==null&&m.q!==undefined?m.q:'-';
+        var price=m.p!==null&&m.p!==undefined?fmtMoney(m.p):'-';
+        var amt=m.a!==null&&m.a!==undefined?fmtMoney(m.a):'-';
+        return '<tr style="border-bottom:1px solid #f1f5f9">'+
+          '<td style="padding:5px 8px">'+m.n+'</td>'+
+          '<td style="text-align:center;padding:5px 8px">'+qty+'</td>'+
+          '<td style="text-align:center;padding:5px 8px;color:var(--muted);font-size:12px">'+m.u+'</td>'+
+          '<td style="text-align:right;padding:5px 8px">'+price+'</td>'+
+          '<td style="text-align:right;padding:5px 8px">'+amt+'</td>'+
+        '</tr>';
+      }).join('')+
+    '</tbody></table>';
+    
+    var id='q_'+idx;
+    return '<div class="card" style="cursor:pointer" onclick="toggleQuoteDetail(\''+id+'\')">'+
+      '<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px">'+
+        '<div>'+
+          '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">'+
+            '<span style="font-size:16px;font-weight:700;color:var(--ink)">'+q.t+'</span>'+
+            '<span style="background:#e0e7ff;color:#3730a3;padding:3px 10px;border-radius:6px;font-size:13px;font-weight:600">'+q.h+'</span>'+
+            tags+
+          '</div>'+
+          '<div style="font-size:11px;color:var(--muted);margin-top:4px">'+q.f+'</div>'+
+        '</div>'+
+        '<div style="text-align:right">'+
+          '<div style="font-size:22px;font-weight:800;color:#dc2626">'+fmtMoney(q.tp)+'</div>'+
+          '<div style="font-size:11px;color:var(--muted)">总合计/㎡</div>'+
+        '</div>'+
+      '</div>'+
+      '<div id="'+id+'" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)">'+
+        '<div style="font-weight:600;font-size:14px;margin-bottom:8px;color:var(--ink)">📦 材料明细</div>'+matTable+
+        '<div style="font-weight:600;font-size:14px;margin-top:12px;margin-bottom:4px;color:var(--ink)">💰 费用汇总</div>'+summaryHtml+
+      '</div>'+
+    '</div>';
+  }).join('');
+}
+
+function toggleQuoteDetail(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  el.style.display=el.style.display==='none'?'block':'none';
+}
+
+function quoteAreaCalc(){
+  var area=parseFloat(document.getElementById('q_area').value)||0;
+  var price=parseFloat(document.getElementById('q_area_price').dataset.price)||0;
+  var total=area*price;
+  document.getElementById('q_area_result').textContent=area>0?'¥'+total.toFixed(2):'---';
 }
 
 function updateBadges(){
@@ -3229,6 +3387,7 @@ if('caches' in window){
 }
 </script>
 
+<script>
 /* ============ 启动 ============ */
 // 全局错误捕获 - 任何 JS 错误都会显示在页面上
 window.onerror = function(msg, src, lineNo, colNo, err) {
