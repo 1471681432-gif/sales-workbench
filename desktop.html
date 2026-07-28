@@ -771,6 +771,23 @@ document.getElementById('deskExpand').addEventListener('click',()=>{
   document.querySelector('.app').classList.remove('sidebar-collapsed');
 });
 
+/* ============ 页面路由 ============ */
+let currentPage='dashboard';
+function go(page){
+  if(!page)return;
+  currentPage=page;
+  document.querySelectorAll('.nav-item,.mobile-nav-item').forEach(b=>{
+    if(b.dataset.page)b.classList.toggle('active',b.dataset.page===page);
+  });
+  render();
+  window.scrollTo(0,0);
+  closeDrawer();
+}
+document.addEventListener('click',e=>{
+  const btn=e.target.closest('[data-page]');
+  if(btn){e.preventDefault();go(btn.dataset.page);}
+});
+
 function render(){
   const c=document.getElementById('pageContent');
   if(currentPage==='dashboard')c.innerHTML=dashboardHtml();
@@ -2833,6 +2850,7 @@ function refreshFollowupTable(){
 }
 
 // 启动
+seedIfEmpty();
 render();
 
 /* ============ PWA 安装逻辑 ============ */
