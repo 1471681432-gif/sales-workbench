@@ -565,6 +565,13 @@
 (function(){
   var el = document.getElementById('_startupDebug');
   if(el) el.textContent = 'JS ENGINE OK - shared.js loading...';
+  // 1秒后检查主脚本是否执行
+  setTimeout(function(){
+    var el2 = document.getElementById('_startupDebug');
+    if(el2 && el2.textContent.indexOf('INLINE SCRIPT') === -1){
+      el2.textContent = 'MAIN SCRIPT DID NOT EXECUTE\nPossible causes:\n1. shared.js SyntaxError\n2. Script blocked by CSP\n3. Network error loading shared.js\n\nCheck browser console (F12) for errors.';
+    }
+  }, 2000);
 })();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
