@@ -1,12 +1,12 @@
 {
   "name": "运动场材料销售工作台",
   "short_name": "销售工作台",
-  "description": "硅PU/EPDM/人造草/丙烯酸 项目销售个人工作台：项目台账、客户跟进、待回访、待回款、数据仪表盘",
+  "description": "硅PU/EPDM/人造草/丙烯酸 项目销售工作台：项目台账、客户管理、跟进记录、待回款、销售漏斗、月度目标。小伊为你打造。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#fff5fa",
+  "background_color": "#0f172a",
   "theme_color": "#ff6b9d",
   "lang": "zh-CN",
   "dir": "ltr",
@@ -16,5 +16,20 @@
     { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
     { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
     { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "新建项目",
+      "short_name": "新建",
+      "description": "快速创建新项目",
+      "url": "./app.html?action=new-project"
+    },
+    {
+      "name": "快速跟进",
+      "short_name": "跟进",
+      "description": "快速记录客户跟进",
+      "url": "./app.html?action=quick-followup"
+    }
   ]
 }
