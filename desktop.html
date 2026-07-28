@@ -771,23 +771,6 @@ document.getElementById('deskExpand').addEventListener('click',()=>{
   document.querySelector('.app').classList.remove('sidebar-collapsed');
 });
 
-/* ============ 页面路由 ============ */
-let currentPage='dashboard';
-function go(page){
-  if(!page)return;
-  currentPage=page;
-  document.querySelectorAll('.nav-item,.mobile-nav-item').forEach(b=>{
-    if(b.dataset.page)b.classList.toggle('active',b.dataset.page===page);
-  });
-  render();
-  window.scrollTo(0,0);
-  closeDrawer();
-}
-document.addEventListener('click',e=>{
-  const btn=e.target.closest('[data-page]');
-  if(btn){e.preventDefault();go(btn.dataset.page);}
-});
-
 function render(){
   try{
     const c=document.getElementById('pageContent');
@@ -2257,10 +2240,6 @@ function saveAlert(id){
   else{data.done=false;als.push(data);}
   saveAL(als);closeModal();toast(id?'已更新':'已新增提醒');render();
 }
-function setAlertDone(id,done){
-  const als=loadAL();const i=als.findIndex(x=>x.id===id);
-  if(i>=0){als[i].done=done;saveAL(als);toast(done?'已标记完成':'已恢复待办');render();}
-}
 function delAlert(id){
   if(!confirm('确定删除该提醒？'))return;
   saveAL(loadAL().filter(x=>x.id!==id));toast('已删除');render();
@@ -2724,10 +2703,6 @@ function delTemplate(id){
   saveTPL(loadTPL().filter(x=>x.id!==id));toast('已删除');render();
 }
 
-/* ============ 工具 ============ */
-function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function escapeAttr(s){return String(s??'').replace(/"/g,'&quot;');}
-
 function bindRowEvents(){
   // 搜索/筛选绑定（仅绑定一次，用 oninput 避免重复）
   const kw=document.getElementById('projKw');
@@ -2855,8 +2830,8 @@ function refreshFollowupTable(){
 }
 
 // 启动
-seedIfEmpty();
-render();
+try{seedIfEmpty();}catch(e){document.getElementById('pageContent').innerHTML='<div style="padding:40px;background:#fee2e2;border-radius:12px;margin:20px"><h2 style="color:#dc2626">数据初始化出错</h2><p>'+e.message+'</p><pre style="font-size:12px">'+e.stack+'</pre></div>';}
+try{render();}catch(e){document.getElementById('pageContent').innerHTML='<div style="padding:40px;background:#fee2e2;border-radius:12px;margin:20px"><h2 style="color:#dc2626">页面渲染出错</h2><p>'+e.message+'</p><pre style="font-size:12px">'+e.stack+'</pre></div>';}
 
 /* ============ PWA 安装逻辑 ============ */
 let deferredPrompt = null;
@@ -2921,11 +2896,14 @@ document.getElementById('installDismiss').addEventListener('click', () => {
   localStorage.setItem(DISMISS_KEY, Date.now());
 });
 
-// 注册 Service Worker（离线可用）
+// 注销旧 Service Worker + 清除旧缓存
 if('serviceWorker' in navigator){
-  window.addEventListener('load', () => {
-    // SW disabled in app.html.catch(err => console.warn('SW注册失败:', err));
+  navigator.serviceWorker.getRegistrations().then(regs=>{
+    regs.forEach(r=>r.unregister());
   });
+}
+if('caches' in window){
+  caches.keys().then(keys=>keys.forEach(k=>caches.delete(k)));
 }
 </script>
 </body>
